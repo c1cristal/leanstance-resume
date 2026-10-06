@@ -1,0 +1,337 @@
+/* app-resume host rules for app-header */
+.host {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 1001;
+  width: 100%;
+  padding: 1em 0;
+  transition: 0.3s;
+}
+
+.host.sticky {
+  position: fixed;
+  background-color: var(--resume-surface);
+  box-shadow: 0 0 9px var(--resume-shadow-strong);
+}
+
+/* app-header */
+.header {
+  display: flex;
+  background: transparent;
+  flex-flow: row wrap;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.header ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header .logoContainer {
+  flex-grow: 2;
+  text-align: left;
+}
+
+.header .logoContainer a {
+  width: 125px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--resume-primary);
+}
+
+.header .navContainer {
+  flex-grow: 5;
+  transition: 0.3s;
+}
+
+.header .navContainer ul {
+  justify-content: flex-end;
+  align-items: center;
+  height: 52px;
+}
+
+.header .navContainer ul li {
+  text-align: center;
+  margin-right: 1em;
+}
+
+.header .navContainer ul li a {
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--resume-primary);
+  padding: 14px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+/* Norwegian labels ("Om meg") are not title-cased. */
+:global(html[lang="no"]) .header .navContainer ul li a {
+  text-transform: none;
+}
+
+.header .navContainer ul li a:not(.active):hover {
+  background-color: var(--resume-surface);
+  box-shadow: 0 0 9px var(--resume-shadow);
+}
+
+.header .navContainer ul li .active {
+  background-color: var(--resume-primary);
+  color: var(--resume-text-inverse);
+  font-weight: 600;
+}
+
+.header .languageContainer .frame {
+  background-color: var(--resume-surface);
+  display: inline-block;
+  border-radius: 15px;
+  box-shadow: 0 0 9px var(--resume-shadow);
+}
+
+.header .languageContainer .frame ul {
+  height: 52px;
+  text-align: center;
+}
+
+.header .languageContainer .frame ul li {
+  flex-grow: 1;
+  display: inline-block;
+  height: 25px;
+  margin: 14px 0 0;
+  border-right: 2px solid var(--resume-border-divider);
+}
+
+.header .languageContainer .frame ul li a {
+  display: inline-block;
+  margin: 0 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--resume-primary-faded);
+  transition: 0.3s;
+}
+
+.header .languageContainer .frame ul li a:hover {
+  color: var(--resume-primary);
+}
+
+.header .languageContainer .frame ul li .active {
+  color: var(--resume-primary);
+}
+
+.header .languageContainer .frame ul li:last-of-type {
+  border-right: none;
+}
+
+.header .languageContainer .frame ul::before {
+  content: "\202f\202d";
+}
+
+.header .navbarToggle {
+  flex-grow: 1;
+  display: none;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header .shareContainer {
+  display: none;
+  margin-left: 10px;
+  background-color: var(--resume-surface);
+  padding: 11px;
+  border-radius: 15px;
+  box-shadow: 0 0 9px var(--resume-shadow);
+  cursor: pointer;
+}
+
+.header .shareContainer.canShare {
+  display: block;
+}
+
+.header .shareContainer .icon {
+  font-size: 25px;
+  color: var(--resume-icon-share);
+}
+
+.header .shareContainer .icon:hover {
+  color: var(--resume-primary);
+}
+
+@media screen and (max-width: 1420px) {
+  .header .languageContainer {
+    margin-right: 10px;
+  }
+  .header .logoContainer {
+    text-align: center;
+  }
+  .header .shareContainer {
+    margin-right: 1em;
+  }
+}
+
+/* Five links no longer fit beside the logo and language switch on narrower desktops. */
+@media screen and (min-width: 1025px) and (max-width: 1220px) {
+  .header .navContainer ul li {
+    margin-right: 0.3em;
+  }
+  .header .navContainer ul li a {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .host {
+    padding: 0;
+  }
+  .host.sticky {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .header {
+    background: var(--resume-surface);
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 0 9px var(--resume-shadow);
+    padding: 10px;
+  }
+  .header .logoContainer {
+    flex-grow: 4;
+  }
+  .header .navContainer {
+    order: 5;
+    border-top: 2px solid var(--resume-border-divider-light);
+    padding-top: 1em;
+    flex-basis: 100%;
+  }
+  .header .navContainer:not(.menuOpen) {
+    display: none;
+  }
+  .header .navContainer ul {
+    flex-flow: column;
+    height: inherit;
+    align-items: flex-start;
+    line-height: 35px;
+    padding-left: 1em;
+  }
+  .header .navContainer ul li a {
+    font-size: 20px;
+    color: var(--resume-text-nav-mobile);
+    padding-left: 25px;
+  }
+  .header .navContainer ul li a:hover {
+    color: var(--resume-primary);
+    box-shadow: none;
+  }
+  .header .navContainer ul li a.active {
+    background-color: var(--resume-surface);
+    color: var(--resume-primary);
+  }
+  .header .navContainer ul li a:not(.active):hover {
+    box-shadow: none;
+  }
+  .header .navContainer ul li::before {
+    content: "\2022";
+    font-size: 50px;
+    position: absolute;
+    color: var(--resume-text-nav-mobile);
+    margin-top: -4px;
+  }
+  .header .navContainer ul li:hover::before {
+    color: var(--resume-primary);
+  }
+  .header .languageContainer {
+    margin-right: 0;
+    flex-grow: initial;
+  }
+  .header .languageContainer .frame {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .header .navbarToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .navbarToggle .barIcon {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .navbarToggle .barIcon {
+    font-size: 20px;
+    border: 1px solid var(--resume-border-toggle);
+    padding: 5px 10px;
+  }
+  .header .languageContainer .frame ul li {
+    height: 21px;
+    margin: 15px 0 0;
+    border-right: 2px solid var(--resume-border-divider);
+  }
+  .header .languageContainer .frame ul li a {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+  .header .shareContainer {
+    padding: 8px;
+    border-radius: 10px;
+  }
+  .header .shareContainer .icon {
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .header .navbarToggle .barIcon {
+    font-size: 15px;
+    border: 1px solid var(--resume-border-toggle);
+    padding: 5px 10px;
+  }
+  .header .logoContainer a {
+    font-size: 28px;
+  }
+  .header .navContainer ul li a {
+    font-size: 18px;
+  }
+  .header .languageContainer .frame ul {
+    height: 35px;
+  }
+  .header .languageContainer .frame ul li {
+    height: 20px;
+    margin: 8px 0 0;
+    border-right: 2px solid var(--resume-border-divider);
+  }
+  .header .languageContainer .frame ul li a {
+    font-size: 15px;
+    margin: 0 8px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .header .logoContainer a {
+    font-size: 24px;
+  }
+  .header .shareContainer {
+    padding: 0;
+    border-radius: 0;
+    margin-right: 5px;
+    box-shadow: none;
+  }
+  .header .shareContainer .icon {
+    font-size: 20px;
+  }
+}

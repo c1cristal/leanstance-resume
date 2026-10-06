@@ -1,0 +1,231 @@
+/* app-welcome */
+.welcome {
+  flex-direction: column;
+  height: 780px;
+  padding-top: 5em;
+}
+
+.layerOne {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.avatarContainer {
+  position: relative;
+}
+
+.illustration {
+  height: 780px;
+  z-index: 1;
+  position: relative;
+}
+
+/* app-welcome-background */
+.skills {
+  position: absolute;
+  top: 67px;
+  left: -35px;
+  z-index: 0;
+}
+
+.skills .background {
+  width: 701px;
+}
+
+.skills .skillIcon {
+  position: absolute;
+  width: 50px;
+  animation-name: floating-icons;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 4s;
+}
+
+.skills .skillIcon:nth-child(2n + 3) {
+  animation-duration: 5s;
+}
+
+.skills .first { top: 511px; left: -36px; }
+.skills .second { top: 213px; left: -65px; }
+.skills .third { top: 77px; left: 4px; }
+.skills .fourth { top: -4px; left: 84px; }
+.skills .fifth { top: -4px; left: 567px; }
+.skills .sixth { top: 494px; left: 673px; }
+.skills .seventh { top: 365px; left: -79px; }
+
+@keyframes floating-icons {
+  0% { transform: translate(0); }
+  25% { transform: translate(5%, 15%); }
+  50% { transform: translate(10%, 5%); }
+  75% { transform: translateY(15%); }
+  to { transform: translate(0); }
+}
+
+/* app-welcome-dialog */
+.dialogContainer {
+  z-index: 2;
+  margin-top: calc(5em - 40px);
+  position: relative; left: calc(clamp(0px, calc(50vw - 580px), 80px) - 30px);
+  animation: float-dialog 6s ease-in-out infinite;
+}
+
+.dialogContainer .bubble {
+  width: 580px;
+  margin-left: -7em;
+}
+
+.dialogContainer .console {
+  position: absolute;
+  top: 7em;
+  left: -5px;
+  width: 380px;
+  text-align: center;
+}
+
+.dialogContainer .console p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.dialogContainer .console .hello {
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--resume-primary);
+}
+
+.dialogContainer .console .txtRotate {
+  font-size: 40px;
+  color: var(--resume-text-typing);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.txtRotate > .wrap::after {
+  content: "|";
+  opacity: 1;
+  animation: typedBlink 0.7s infinite;
+}
+
+@keyframes typedBlink {
+  50% { opacity: 0; }
+}
+
+@keyframes float-dialog {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  to { transform: translateY(0); }
+}
+
+@media screen and (max-width: 1100px) {
+  .welcome, .illustration { height: 585px; }
+  .skills { top: 60px; left: -26px; }
+  .skills .background { width: 525px; }
+  .skills .skillIcon { width: 40px; }
+  .skills .first { top: 417px; left: -4px; }
+  .skills .second { top: 172px; left: -51px; }
+  .skills .third { top: 56px; left: 5px; }
+  .skills .fourth { top: -9px; left: 75px; }
+  .skills .fifth { top: -9px; left: 410px; }
+  .skills .sixth { top: 365px; left: 519px; }
+  .skills .seventh { top: 300px; left: -54px; }
+  .dialogContainer { position: relative; left: calc(clamp(0px, calc(50vw - 429px), 83px) - 22px); }
+  .dialogContainer .bubble { width: 435px; }
+  .dialogContainer .console { top: 6em; width: 280px; left: -2em; }
+  .dialogContainer .console .hello { font-size: 40px; }
+  .dialogContainer .console .txtRotate { font-size: 25px; }
+}
+
+@media screen and (max-width: 880px) {
+  .welcome, .illustration { height: 465px; }
+  .skills { top: 47px; left: -21px; }
+  .skills .background { width: 418px; }
+  .skills .skillIcon { width: 35px; }
+  .skills .first { top: 308px; left: -19px; }
+  .skills .second { top: 114px; left: -36px; }
+  .skills .third { top: 28px; left: 15px; }
+  .skills .fourth { top: -21px; left: 55px; }
+  .skills .fifth { top: -21px; left: 328px; }
+  .skills .sixth { top: 255px; left: 421px; }
+  .skills .seventh { top: 213px; left: -48px; }
+  .dialogContainer { position: relative; left: calc(clamp(0px, calc(50vw - 342px), 55px) - 18px); }
+  .dialogContainer .bubble { width: 325px; margin-left: -5em; }
+  .dialogContainer .console { top: 4em; width: 210px; left: -1em; }
+  .dialogContainer .console .hello { font-size: 30px; }
+  .dialogContainer .console .txtRotate { font-size: 22px; }
+}
+
+@media screen and (max-width: 720px) {
+  .welcome, .illustration { height: 385px; }
+  .skills { top: 40px; left: -17px; }
+  .skills .background { width: 345px; }
+  .skills .skillIcon { width: 27px; }
+  .skills .first { top: 250px; left: -14px; }
+  .skills .second { top: 99px; left: -27px; }
+  .skills .third { top: 32px; left: 11px; }
+  .skills .fourth { top: 3px; left: 30px; }
+  .skills .fifth { top: 3px; left: 288px; }
+  .skills .sixth { top: 182px; left: 353px; }
+  .skills .seventh { top: 176px; left: -36px; }
+  .dialogContainer { margin-top: calc(2em - 40px); position: relative; left: calc(clamp(0px, calc(50vw - 310px), 35px) - 15px); }
+  .dialogContainer .bubble { width: 310px; margin-left: -4em; }
+  .dialogContainer .console { top: 4em; width: 210px; }
+  .dialogContainer .console .hello { font-size: 30px; }
+  .dialogContainer .console .txtRotate { font-size: 22px; }
+}
+
+@media screen and (max-width: 600px) {
+  .welcome, .illustration { height: 290px; }
+  .skills { top: 29px; left: -13px; }
+  .skills .background { width: 261px; }
+  .skills .skillIcon { width: 22px; }
+  .skills .first { top: 196px; left: -9px; }
+  .skills .second { top: 74px; left: -23px; }
+  .skills .third { top: 19px; left: 8px; }
+  .skills .fourth { top: -5px; left: 29px; }
+  .skills .fifth { top: -5px; left: 210px; }
+  .skills .sixth { top: 132px; left: 269px; }
+  .skills .seventh { top: 136px; left: -30px; }
+  .dialogContainer { margin-top: calc(2em - 40px); position: relative; left: calc(clamp(0px, calc(50vw - 234px), 24px) - 11px); }
+  .dialogContainer .bubble { width: 220px; margin-left: -3em; }
+  .dialogContainer .console { top: 40px; width: 130px; left: 0; }
+  .dialogContainer .console .hello { font-size: 22px; }
+  .dialogContainer .console .txtRotate { font-size: 16px; }
+}
+
+@media screen and (max-width: 500px) {
+  .welcome, .illustration { height: 250px; }
+  .skills { top: 26px; left: -11px; }
+  .skills .background { width: 224px; }
+  .skills .skillIcon { width: 18px; }
+  .skills .first { top: 154px; left: -15px; }
+  .skills .second { top: 57px; left: -17px; }
+  .skills .third { top: 16px; left: 9px; }
+  .skills .fourth { top: -6px; left: 32px; }
+  .skills .fifth { top: -6px; left: 174px; }
+  .skills .sixth { top: 130px; left: 225px; }
+  .skills .seventh { top: 106px; left: -26px; }
+  .dialogContainer { margin-top: calc(3em - 40px); position: relative; left: calc(clamp(0px, calc(50vw - 190px), 23px) - 10px); }
+  .dialogContainer .bubble { width: 160px; margin-left: -45px; }
+  .dialogContainer .console { top: 30px; width: 120px; left: -25px; }
+  .dialogContainer .console .hello { font-size: 14px; }
+  .dialogContainer .console .txtRotate { font-size: 11px; line-height: 15px; display: inline-block; margin-top: 5px; }
+}
+
+@media screen and (max-width: 320px) {
+  .welcome, .illustration { height: 220px; }
+  .skills { top: 22px; left: -10px; }
+  .skills .background { width: 198px; }
+  .skills .skillIcon { width: 16px; }
+  .skills .first { top: 146px; left: -11px; }
+  .skills .second { top: 53px; left: -18px; }
+  .skills .third { top: 13px; left: 6px; }
+  .skills .fourth { top: -3px; left: 28px; }
+  .skills .fifth { top: -3px; left: 154px; }
+  .skills .sixth { top: 132px; left: 195px; }
+  .skills .seventh { top: 100px; left: -24px; }
+  .dialogContainer { position: relative; left: calc(clamp(0px, calc(50vw - 178px), 22px) - 8px); }
+  .dialogContainer .console .txtRotate { font-size: 12px; }
+}

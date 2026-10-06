@@ -1,0 +1,33 @@
+/*
+ * The original page renders on browser defaults (content-box sizing, UA heading/paragraph
+ * margins, inline images). Tailwind's preflight removes those, so restore UA styles inside
+ * the clone root with zero specificity; every component rule still wins.
+ */
+.root {
+  display: block;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+:where(.root) :where(*:not(svg, svg *)) {
+  all: revert;
+}
+
+:where(.root) :where(input, textarea)::placeholder {
+  color: revert;
+  opacity: revert;
+}
+
+/* section{display:flex} and the host blocks come from the original global styles.css */
+:where(.root) :where(section) {
+  display: flex;
+}
+
+.sectionHost {
+  display: block;
+}
+
+.footerHost {
+  display: block;
+  position: relative;
+  top: -3em;
+}

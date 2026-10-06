@@ -1,0 +1,360 @@
+.overlay {
+  display: flex;
+  background: var(--resume-experience-overlay);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 4em;
+  padding-bottom: 8em;
+}
+
+.landscape {
+  background-color: var(--resume-experience-fallback);
+  background-size: cover;
+  top: -4em;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  align-self: center;
+  width: 85vw;
+}
+
+.topContainer {
+  display: flex;
+  color: var(--resume-text-inverse);
+  flex-wrap: wrap;
+}
+
+.topContainer .title {
+  flex-grow: 4;
+}
+
+.topContainer .title h1 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.topContainer .navigationMobile {
+  display: none;
+}
+
+.topContainer .navigationMobile a {
+  text-decoration: none;
+  color: var(--resume-text-inverse);
+}
+
+.topContainer .navigation {
+  display: flex;
+  flex-grow: 1;
+  font-size: 30px;
+  font-weight: 500;
+  align-items: center;
+  text-align: center;
+}
+
+.topContainer .navigation a {
+  text-decoration: none;
+  color: var(--resume-text-inverse);
+}
+
+.topContainer .navigation .previous {
+  flex-grow: 2;
+  cursor: pointer;
+  text-align: left;
+  transition: text-shadow 0.3s linear;
+}
+
+.topContainer .navigation .previous.disabled,
+.topContainer .navigation .next.disabled {
+  cursor: no-drop;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.topContainer .navigation .previous:hover,
+.topContainer .navigation .next:hover {
+  text-shadow: 0 0 15px var(--resume-glow);
+}
+
+.topContainer .navigation span {
+  margin: 10px;
+}
+
+.topContainer .navigation .divider {
+  flex-grow: 1;
+}
+
+.topContainer .navigation .next {
+  flex-grow: 2;
+  cursor: pointer;
+  text-align: right;
+  transition: text-shadow 0.3s linear;
+}
+
+.middleContainer {
+  display: flex;
+  touch-action: pan-y !important;
+  flex-direction: column;
+  text-align: right;
+  color: var(--resume-text-inverse);
+}
+
+.eventsContent {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.4s;
+  min-height: 570px;
+}
+
+.eventsContent .headerBlock {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.eventsContent .headerBlock .logoBlock {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+/* Logos are shown as white silhouettes on the dark slides, and wide ones are capped in width. */
+.eventsContent .headerBlock .logoBlock img {
+  height: 90px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  object-position: left center;
+  filter: brightness(0) invert(1);
+}
+
+.eventsContent .headerBlock .infoBlock {
+  flex-grow: 1;
+}
+
+.eventsContent .companyName {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.eventsContent .companyName a {
+  text-decoration: none;
+  color: var(--resume-text-inverse);
+}
+
+.eventsContent .role {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 1em;
+  font-style: italic;
+}
+
+.eventsContent .period {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.eventsContent .period span {
+  margin: 5px;
+  text-transform: capitalize;
+}
+
+.eventsContent .location {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.eventsContent .description {
+  margin-top: 1em;
+  line-height: 1.5em;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.eventsContent .description p {
+  margin: 0.9em 0 0;
+}
+
+/* The blank line after the opening sentence already provides the gap. */
+.eventsContent .description br + ul,
+.eventsContent .description br + p {
+  margin-top: 0;
+}
+
+/* Descriptions can open with the company mission followed by a bulleted list of achievements. */
+.eventsContent .description ul {
+  margin: 0.6em 0 0;
+  padding-left: 1.2em;
+  list-style: disc;
+}
+
+/* Undo the carousel's `ol li` slide rules, which would otherwise hide these nested list items. */
+.eventsContent .description li {
+  position: static;
+  z-index: auto;
+  width: auto;
+  margin: 0.4em 0 0;
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+.eventsContent ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.eventsContent ol li {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translate(-100%);
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+}
+
+.eventsContent ol .selected {
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.eventsContent ol li.enterRight,
+.eventsContent ol li.leaveRight {
+  animation-name: cd-enter-right;
+}
+
+.eventsContent ol li.enterLeft,
+.eventsContent ol li.leaveLeft {
+  animation-name: cd-enter-left;
+}
+
+.eventsContent ol li.leaveRight,
+.eventsContent ol li.leaveLeft {
+  animation-direction: reverse;
+}
+
+.eventsContent .technologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.eventsContent .technologies span.hashtag {
+  padding: 2px 5px;
+  background-color: var(--resume-secondary);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.eventsContent .technologies span.hashtag::before {
+  content: "#";
+}
+
+.eventsContent .socialMedia {
+  text-align: right;
+  margin-top: 1em;
+}
+
+.eventsContent .socialMedia .icon {
+  font-size: 50px;
+  color: var(--resume-text-inverse);
+  margin: 0 20px;
+  transition: 0.3s;
+}
+
+/* Each icon is the only child of its link, so this matches every icon (as in the original). */
+.eventsContent .socialMedia .icon:last-child {
+  margin-right: 0;
+}
+
+.eventsContent .socialMedia .icon:hover {
+  color: var(--resume-icon-hover);
+}
+
+@keyframes cd-enter-right {
+  0% { opacity: 0; transform: translate(100%); }
+  to { opacity: 1; transform: translate(0); }
+}
+
+@keyframes cd-enter-left {
+  0% { opacity: 0; transform: translate(-100%); }
+  to { opacity: 1; transform: translate(0); }
+}
+
+@media screen and (max-width: 1024px) {
+  .topContainer .title h1 { font-size: 38px; }
+  .topContainer .navigation { font-size: 28px; }
+  .eventsContent .companyName { font-size: 30px; }
+  .eventsContent .role,
+  .eventsContent .period,
+  .eventsContent .location,
+  .eventsContent .description { font-size: 18px; }
+  .middleContainer .technologies span.hashtag { font-size: 15px; }
+  .middleContainer .socialMedia .icon { font-size: 40px; }
+  .landscape { background-attachment: scroll; }
+}
+
+@media screen and (max-width: 880px) {
+  .topContainer { flex-direction: column; }
+  .topContainer .title h1 { margin: 0 0 30px; text-align: center; }
+  .middleContainer { margin-top: 30px; }
+  .eventsContent .socialMedia .icon { font-size: 40px; }
+}
+
+@media screen and (max-width: 720px) {
+  .overlay { padding-bottom: 1em; padding-top: 6em; }
+  .topContainer .navigationMobile { display: flex; flex-direction: row; flex-wrap: nowrap; text-align: center; }
+  .topContainer .navigationMobile .molding { border: 3px solid var(--resume-text-inverse); display: inline-block; padding: 10px 1em; border-radius: 10px; }
+  .topContainer .navigationMobile .molding span { margin: 5px; }
+  .topContainer .navigationMobile .previous { flex-grow: 1; cursor: pointer; }
+  .topContainer .navigationMobile .previous.disabled,
+  .topContainer .navigationMobile .next.disabled { cursor: no-drop; opacity: 0.6; pointer-events: none; }
+  .topContainer .navigationMobile .previous:hover,
+  .topContainer .navigationMobile .next:hover { text-shadow: 0 0 15px var(--resume-glow); }
+  .topContainer .navigationMobile .current { flex-grow: 1; align-self: center; font-size: 35px; font-weight: 600; }
+  .topContainer .navigationMobile .next { flex-grow: 1; cursor: pointer; }
+  .topContainer .navigation { display: none; }
+  .eventsContent .companyName { font-size: 28px; }
+  .eventsContent .headerBlock .logoBlock { justify-content: center; }
+  .eventsContent .headerBlock .logoBlock img { object-position: center; }
+  .eventsContent .companyName,
+  .eventsContent .role,
+  .eventsContent .period,
+  .eventsContent .location { text-align: center; }
+  .eventsContent .socialMedia { text-align: center; margin-top: 2em; }
+  .eventsContent .socialMedia .icon { font-size: 50px; }
+}
+
+@media screen and (max-width: 320px) {
+  .topContainer .title h1 { font-size: 34px; }
+  .topContainer .navigationMobile .current { font-size: 32px; }
+  .topContainer .navigationMobile .molding { padding: 10px 5px 10px 6px; }
+  .eventsContent .headerBlock .logoBlock img { height: 70px; }
+  .eventsContent .description { font-size: 14px; }
+  .eventsContent .technologies span.hashtag { font-size: 12px; }
+  .eventsContent .socialMedia { margin-top: 1em; }
+  .eventsContent .socialMedia .icon { font-size: 35px; }
+}
+

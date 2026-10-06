@@ -1,0 +1,157 @@
+.about {
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(0deg, var(--resume-surface) 44.44%, var(--resume-page-bg) 44.44%, var(--resume-page-bg) 0%, var(--resume-surface) 0%, var(--resume-surface) 94.44%, var(--resume-page-bg) 94.44%, var(--resume-page-bg) 100%);
+  background-size: 10px 1220px;
+}
+
+.aboutContainer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--resume-surface);
+  flex-direction: row;
+  border-radius: 15px;
+  box-shadow: 0 0 9px var(--resume-shadow);
+  width: 85vw;
+  z-index: 2;
+  padding: 2em;
+  max-width: 1400px;
+}
+
+.aboutContainer p {
+  margin: 0;
+  padding: 0;
+}
+
+.firstColumn {
+  flex-grow: 2;
+}
+
+.aboutContainer .firstColumn h1 {
+  color: var(--resume-text-heading-muted);
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.aboutContainer .firstColumn h2 {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--resume-primary);
+  margin: 5px 0 0;
+}
+
+.aboutContainer .firstColumn h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--resume-text-heading-muted);
+  margin-bottom: 10px;
+}
+
+.aboutContainer .firstColumn p.text {
+  margin-top: 1em;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--resume-text-body);
+  margin-right: 2em;
+  text-align: left;
+  min-height: 220px;
+  line-height: 1.5em;
+}
+
+.aboutContainer .firstColumn .icon {
+  font-size: 40px;
+  color: var(--resume-icon-hobby);
+  margin-right: 1em;
+  transition: 0.3s;
+}
+
+.aboutContainer .firstColumn .icon:hover {
+  color: var(--resume-icon-hover);
+}
+
+.secondColumn {
+  flex-grow: 1;
+}
+
+.aboutContainer .secondColumn .profilePicture {
+  display: block;
+  width: 450px;
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 99em;
+  border: 3px solid var(--resume-page-bg);
+}
+
+.aboutContainer .secondColumn .socialMedia {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.aboutContainer .secondColumn .socialMedia .icon {
+  font-size: 60px;
+  color: var(--resume-secondary);
+  margin: 0 20px;
+  transition: 0.3s;
+}
+
+.aboutContainer .secondColumn .socialMedia .icon:hover {
+  color: var(--resume-icon-hover);
+}
+
+@media screen and (max-width: 1280px) {
+  .aboutContainer .firstColumn p.text { font-size: 16px; }
+  .aboutContainer .secondColumn .profilePicture { width: 380px; height: 380px; }
+}
+
+@media screen and (max-width: 1024px) {
+  .aboutContainer .secondColumn .profilePicture { width: 370px; height: 370px; }
+}
+
+@media screen and (max-width: 960px) {
+  .aboutContainer { width: 80vw; flex-wrap: wrap; }
+  .firstColumn h1 { font-size: 20px; }
+  .firstColumn h2 { font-size: 32px; }
+  .firstColumn .hobbies { text-align: center; }
+  .secondColumn { display: flex; flex-direction: column; margin-top: 2em; }
+  .secondColumn .profilePicture { width: 360px; height: 360px; align-self: center; }
+}
+
+@media screen and (max-width: 880px) {
+  .about { background-size: 10px 1350px; }
+  .aboutContainer .firstColumn h2 { font-size: 30px; }
+  .aboutContainer .firstColumn .icon { margin: 20px; }
+  .aboutContainer .firstColumn p.text { font-size: 16px; margin-right: 0; }
+  .aboutContainer .secondColumn .profilePicture { width: 340px; height: 340px; }
+}
+
+@media screen and (max-width: 600px) {
+  .about { background-size: 10px 1600px; }
+  .aboutContainer { width: 75vw; }
+  .aboutContainer .firstColumn h2 { font-size: 26px; }
+  .aboutContainer .firstColumn .icon { margin: 0.5em; }
+}
+
+@media screen and (max-width: 460px) {
+  .aboutContainer .firstColumn h1 { font-size: 18px; }
+  .aboutContainer .firstColumn h2 { font-size: 20px; }
+  .aboutContainer .firstColumn p.text { font-size: 14px; }
+  .aboutContainer .firstColumn .icon { font-size: 30px; margin: 10px; }
+  .secondColumn .profilePicture { width: 280px; height: 280px; }
+}
+
+@media screen and (max-width: 370px) {
+  .aboutContainer .secondColumn .profilePicture { width: 300px; height: 300px; }
+}
+
+@media screen and (max-width: 320px) {
+  .aboutContainer { width: 80vw; padding: 15px; }
+  .aboutContainer .firstColumn h2 { font-size: 18px; }
+  .aboutContainer .secondColumn .profilePicture { width: 240px; height: 240px; }
+  .aboutContainer .secondColumn .socialMedia .icon { font-size: 40px; }
+}

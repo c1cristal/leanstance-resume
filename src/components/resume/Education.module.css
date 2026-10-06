@@ -1,0 +1,113 @@
+/* app-education: sits between Experience and Offerings, shifted up 4em like its neighbours */
+.education {
+  top: -4em;
+  position: relative;
+  justify-content: center;
+  background-color: var(--resume-page-bg);
+  /* the extra 4em is the part the next section overlaps */
+  padding: 5em 0 7em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 85vw;
+  max-width: 1400px;
+}
+
+.container h1 {
+  margin: 0 0 0.6em;
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--resume-primary);
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: var(--resume-surface);
+  border-radius: 15px;
+  box-shadow: 0 0 9px var(--resume-shadow);
+  padding: 1.5em 2em 1em;
+}
+
+.card h2 {
+  margin: 0 0 0.6em;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--resume-primary);
+}
+
+/* Each list flows into columns, top to bottom, so a long list does not leave a short one beside it. */
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  column-gap: 3em;
+}
+
+.threeColumns {
+  column-count: 3;
+}
+
+.twoColumns {
+  column-count: 2;
+}
+
+.card li {
+  break-inside: avoid;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5em;
+  padding: 0.9em 0;
+  border-top: 1px solid var(--resume-border-divider);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--resume-primary);
+}
+
+.detail {
+  margin-top: 0.2em;
+  font-size: 17px;
+  color: var(--resume-text-body);
+}
+
+.credential {
+  margin-top: 0.2em;
+  font-size: 14px;
+  color: var(--resume-text-heading-muted);
+}
+
+.year {
+  flex-shrink: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--resume-secondary);
+}
+
+@media screen and (max-width: 880px) {
+  .list { column-count: 1; }
+  .card { padding: 1.2em 1.4em 0.6em; }
+  .container h1 { font-size: 34px; text-align: center; }
+  .card h2 { font-size: 22px; }
+  .name { font-size: 18px; }
+  .detail, .year { font-size: 15px; }
+}
+
+@media screen and (max-width: 500px) {
+  .container h1 { font-size: 28px; }
+}

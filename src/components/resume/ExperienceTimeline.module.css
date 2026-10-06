@@ -1,0 +1,109 @@
+.bottomContainer {
+  position: relative;
+  bottom: -75px;
+}
+
+.mainCont {
+  height: 80%;
+  width: 100%;
+  position: relative;
+  color: var(--resume-text-inverse);
+  font-size: 62px;
+  text-align: center;
+  transition: all 0.2s ease-out;
+}
+
+.lineCont {
+  width: 100%;
+  height: 20%;
+}
+
+.lineCont .line {
+  height: 3px;
+  width: 100%;
+  background: var(--resume-timeline-line);
+  border-radius: 5px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+
+.milestone {
+  width: 10px;
+  height: 10px;
+  background: var(--resume-text-inverse);
+  border-radius: 15px;
+  position: absolute;
+  top: -6px;
+  border: 3px solid var(--resume-text-inverse);
+  cursor: pointer;
+  transition: text-shadow 0.3s linear;
+}
+
+.milestone .popupSpan {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  white-space: nowrap;
+  color: var(--resume-text-inverse);
+  position: absolute;
+  top: 20px;
+  left: -35px;
+  transition: all 0.1s ease-out;
+  pointer-events: none;
+}
+
+.milestone.current {
+  width: 15px;
+  height: 15px;
+  background: var(--resume-secondary);
+  top: -8px;
+  font-size: 22px;
+  text-shadow: 0 0 15px var(--resume-glow);
+}
+
+.milestone.active .popupSpan {
+  top: -40px;
+  display: block;
+}
+
+.milestone.active.future {
+  width: 1px;
+  height: 1px;
+  border-top: 7px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 13px solid var(--resume-text-inverse);
+  background: transparent;
+  border-radius: 0;
+  border-right: 0;
+  pointer-events: none;
+}
+
+.milestone.active.current .popupSpan {
+  left: -50px;
+  top: -50px;
+}
+
+@media screen and (max-width: 1024px) {
+  .bottomContainer { bottom: -90px; }
+  .milestone { width: 8px; height: 8px; top: -6px; }
+  .milestone .popupSpan { left: -40px; font-size: 15px; }
+  .milestone.current { width: 12px; height: 12px; top: -8px; }
+  .milestone.current .popupSpan { font-size: 18px; }
+  .milestone.active.current .popupSpan { top: -45px; left: -40px; }
+}
+
+@media screen and (max-width: 880px) {
+  .bottomContainer { bottom: -60px; }
+  .milestone .popupSpan { left: -20px; }
+  .milestone.active.current .popupSpan { left: -25px; }
+}
+
+@media screen and (max-width: 600px) {
+  .bottomContainer { display: none; }
+}
+
+.futureEdge {
+  left: 100%;
+}

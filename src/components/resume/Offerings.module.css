@@ -1,0 +1,192 @@
+/* app-offerings: a dark carousel like Experiences, one offering per slide */
+.offerings {
+  top: -4em;
+  position: relative;
+  justify-content: center;
+  background-color: var(--resume-experience-fallback);
+}
+
+.overlay {
+  display: flex;
+  background: var(--resume-experience-overlay);
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 5em;
+  padding-bottom: 8em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  align-self: center;
+  width: 85vw;
+}
+
+.topContainer {
+  display: flex;
+  color: var(--resume-text-inverse);
+  flex-wrap: wrap;
+}
+
+.topContainer .title {
+  flex-grow: 4;
+}
+
+.topContainer .title h1 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.topContainer .navigation {
+  display: flex;
+  flex-grow: 1;
+  font-size: 30px;
+  font-weight: 500;
+  align-items: center;
+  text-align: center;
+}
+
+.topContainer .navigation a {
+  text-decoration: none;
+  color: var(--resume-text-inverse);
+}
+
+.topContainer .navigation .previous {
+  flex-grow: 2;
+  cursor: pointer;
+  text-align: left;
+  transition: text-shadow 0.3s linear;
+}
+
+.topContainer .navigation .next {
+  flex-grow: 2;
+  cursor: pointer;
+  text-align: right;
+  transition: text-shadow 0.3s linear;
+}
+
+.topContainer .navigation .previous.disabled,
+.topContainer .navigation .next.disabled {
+  cursor: no-drop;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.topContainer .navigation .previous:hover,
+.topContainer .navigation .next:hover {
+  text-shadow: 0 0 15px var(--resume-glow);
+}
+
+.topContainer .navigation span {
+  margin: 10px;
+}
+
+.topContainer .navigation .divider {
+  flex-grow: 1;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+  color: var(--resume-text-inverse);
+  touch-action: pan-y;
+  animation: offering-in 0.4s ease-out;
+}
+
+@keyframes offering-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.offeringTitle {
+  margin: 0.4em 0 0;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.description {
+  margin-top: 1em;
+  max-width: 900px;
+  line-height: 1.5em;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.description p {
+  margin: 0.9em 0 0;
+}
+
+.description p:first-child {
+  margin-top: 0;
+}
+
+.description ul {
+  margin: 0.6em 0 0;
+  padding-left: 1.2em;
+  list-style: disc;
+}
+
+.description li {
+  margin: 0.25em 0;
+}
+
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.picture {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 4 / 3;
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+.picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 2em;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 2px solid var(--resume-text-inverse);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.dot:hover {
+  box-shadow: 0 0 10px var(--resume-glow);
+}
+
+.activeDot {
+  background: var(--resume-text-inverse);
+}
+
+@media screen and (max-width: 600px) {
+  .topContainer .title h1 { font-size: 32px; }
+  .topContainer .navigation { font-size: 22px; }
+  .offeringTitle { font-size: 28px; }
+  .description { font-size: 18px; }
+  .pictures { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,32 @@
+.footer {
+  background-color: var(--resume-footer-bg);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  margin: 0;
+  padding: 1em;
+}
+
+.credits {
+  flex-basis: 100%;
+  font-size: 13px;
+  color: var(--resume-text-inverse);
+  opacity: 0.85;
+}
+
+.credits a {
+  color: inherit;
+}
+
+.copyright {
+  flex-grow: 1;
+  text-align: right;
+  color: var(--resume-text-inverse);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 500px) {
+  .copyright { text-align: center; }
+}
