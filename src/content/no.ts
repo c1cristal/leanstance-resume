@@ -129,7 +129,7 @@ const aboutMedias: ResumeMedia[] = [
   {
     icon: "github",
     title: "GitHub",
-    href: "https://github.com/cristal-richardson"
+    href: "https://github.com/c1cristal"
   }
 ];
 
