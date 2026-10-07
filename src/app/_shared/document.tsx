@@ -41,7 +41,6 @@ export function buildMetadata(locale: Locale): Metadata {
         { url: `${SEO}/favicon-16x16.png`, sizes: "16x16", type: "image/png" },
       ],
       apple: [{ url: `${SEO}/apple-touch-icon.png`, sizes: "180x180" }],
-      other: [{ rel: "mask-icon", url: `${SEO}/safari-pinned-tab.svg`, color: "#5bbad5" }],
     },
     openGraph: {
       title: site.title,
