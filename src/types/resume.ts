@@ -7,6 +7,8 @@ export interface ResumeMedia {
 export interface ResumeHobby {
   icon: "hiking" | "suitcase-rolling" | "dog" | "campground" | "utensils";
   title: string;
+  // Optional photo: when set, the hobby icon is clickable and opens the photo in a popout.
+  picture?: { src: string; alt: string };
 }
 
 export interface ResumeExperience {
@@ -77,7 +79,7 @@ export interface ResumeUi {
   copyright: string;
   nav: { about: string; experience: string; education: string; offerings: string; contact: string; openPdf: string };
   welcome: { hello: string; backgroundAlt: string; bubbleAlt: string };
-  about: { title: string; hobbies: string };
+  about: { title: string; hobbies: string; closePicture: string };
   experience: { title: string };
   education: { title: string; degrees: string; certifications: string; credentialId: string };
   offerings: { title: string };

@@ -1,5 +1,6 @@
 import type { ResumeContent } from "@/types/resume";
 
+import { Hobbies } from "./Hobbies";
 import { MediaIcon } from "./MediaIcon";
 import styles from "./About.module.css";
 
@@ -14,12 +15,7 @@ export function About({ content }: { content: ResumeContent }) {
             <span itemProp="name">{personal.name}</span>
           </h2>
           <p className={styles.text} dangerouslySetInnerHTML={{ __html: aboutDescriptionHtml }} />
-          <div className={styles.hobbies}>
-            <h3>{ui.about.hobbies}</h3>
-            {hobbies.map((hobby) => (
-              <MediaIcon key={hobby.icon} icon={hobby.icon} title={hobby.title} className={styles.icon} />
-            ))}
-          </div>
+          <Hobbies title={ui.about.hobbies} hobbies={hobbies} closeLabel={ui.about.closePicture} />
         </div>
         <div className={styles.secondColumn}>
           <div className={styles.profilePicture} style={{ backgroundImage: `url("${personal.picture}")` }} />

@@ -64,7 +64,7 @@ const ui: ResumeContent["ui"] = {
     backgroundAlt: "Bakgrunnssirkel",
     bubbleAlt: "Velkomstboble",
   },
-  about: { title: "Om meg", hobbies: "Hobbyer" },
+  about: { title: "Om meg", hobbies: "Hobbyer", closePicture: "Lukk bildet" },
   experience: { title: "Erfaring" },
   education: { title: "Utdanning og sertifiseringer", degrees: "Utdanning", certifications: "Sertifiseringer", credentialId: "Sertifikat-ID" },
   offerings: { title: "Tjenester" },

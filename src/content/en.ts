@@ -63,7 +63,7 @@ const ui: ResumeContent["ui"] = {
     backgroundAlt: "Background circle",
     bubbleAlt: "Welcome Speech Bobble",
   },
-  about: { title: "About me", hobbies: "Hobbies" },
+  about: { title: "About me", hobbies: "Hobbies", closePicture: "Close picture" },
   experience: { title: "Experiences" },
   education: { title: "Education & Certifications", degrees: "Education", certifications: "Certifications", credentialId: "Credential ID" },
   offerings: { title: "Offerings" },

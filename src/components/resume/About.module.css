@@ -44,13 +44,6 @@
   margin: 5px 0 0;
 }
 
-.aboutContainer .firstColumn h3 {
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--resume-text-heading-muted);
-  margin-bottom: 10px;
-}
-
 .aboutContainer .firstColumn p.text {
   margin-top: 1em;
   font-size: 18px;
@@ -60,17 +53,6 @@
   text-align: left;
   min-height: 220px;
   line-height: 1.5em;
-}
-
-.aboutContainer .firstColumn .icon {
-  font-size: 40px;
-  color: var(--resume-icon-hobby);
-  margin-right: 1em;
-  transition: 0.3s;
-}
-
-.aboutContainer .firstColumn .icon:hover {
-  color: var(--resume-icon-hover);
 }
 
 .secondColumn {
@@ -117,7 +99,6 @@
   .aboutContainer { width: 80vw; flex-wrap: wrap; }
   .firstColumn h1 { font-size: 20px; }
   .firstColumn h2 { font-size: 32px; }
-  .firstColumn .hobbies { text-align: center; }
   .secondColumn { display: flex; flex-direction: column; margin-top: 2em; }
   .secondColumn .profilePicture { width: 360px; height: 360px; align-self: center; }
 }
@@ -125,7 +106,6 @@
 @media screen and (max-width: 880px) {
   .about { background-size: 10px 1350px; }
   .aboutContainer .firstColumn h2 { font-size: 30px; }
-  .aboutContainer .firstColumn .icon { margin: 20px; }
   .aboutContainer .firstColumn p.text { font-size: 16px; margin-right: 0; }
   .aboutContainer .secondColumn .profilePicture { width: 340px; height: 340px; }
 }
@@ -134,14 +114,12 @@
   .about { background-size: 10px 1600px; }
   .aboutContainer { width: 75vw; }
   .aboutContainer .firstColumn h2 { font-size: 26px; }
-  .aboutContainer .firstColumn .icon { margin: 0.5em; }
 }
 
 @media screen and (max-width: 460px) {
   .aboutContainer .firstColumn h1 { font-size: 18px; }
   .aboutContainer .firstColumn h2 { font-size: 20px; }
   .aboutContainer .firstColumn p.text { font-size: 14px; }
-  .aboutContainer .firstColumn .icon { font-size: 30px; margin: 10px; }
   .secondColumn .profilePicture { width: 280px; height: 280px; }
 }
 
