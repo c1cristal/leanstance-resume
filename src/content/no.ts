@@ -100,23 +100,28 @@ const aboutDescriptionHtml = "Jeg er din Performance Partner hos Leanstance, med
 const hobbies: ResumeHobby[] = [
   {
     icon: "hiking",
-    title: "Fotturer"
+    title: "Fotturer",
+    picture: { src: `${ASSET_ROOT}/images/hobbies/hiking.jpeg`, alt: "Meg på fjellet bak gården vår, et av mine favorittsteder å gå tur" }
   },
   {
     icon: "suitcase-rolling",
-    title: "Reiser"
+    title: "Reiser",
+    picture: { src: `${ASSET_ROOT}/images/hobbies/travel.jpeg`, alt: "Meg som svarer mannen min under en weekendtur til en storby" }
   },
   {
     icon: "dog",
-    title: "Hunder"
+    title: "Hunder",
+    picture: { src: `${ASSET_ROOT}/images/hobbies/dog.jpeg`, alt: "Vår herlige flatcoat som passende nok heter Happy" }
   },
   {
     icon: "campground",
-    title: "Glamping"
+    title: "Glamping",
+    picture: { src: `${ASSET_ROOT}/images/hobbies/camping.jpeg`, alt: "Glampingprosjektet mitt på gården" }
   },
   {
     icon: "utensils",
-    title: "Matlaging"
+    title: "Matlaging",
+    picture: { src: `${ASSET_ROOT}/images/hobbies/food.jpeg`, alt: "Jeg elsker å lage mat og liker å bake surdeigsbrød" }
   }
 ];
 

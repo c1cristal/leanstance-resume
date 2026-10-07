@@ -62,7 +62,10 @@ export function Hobbies({ title, hobbies, closeLabel }: HobbiesProps) {
             </button>
             {/* eslint-disable-next-line @next/next/no-img-element -- natural-size photo, contained by CSS */}
             <img src={active.picture.src} alt={active.picture.alt} />
-            <figcaption>{active.title}</figcaption>
+            {/* Screen readers already get this text from the image's alt, so the caption is hidden from them. */}
+            <figcaption aria-hidden="true">
+              <strong>{active.title}</strong> – {active.picture.alt}
+            </figcaption>
           </figure>
         )}
       </dialog>

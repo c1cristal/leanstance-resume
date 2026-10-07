@@ -99,23 +99,28 @@ const aboutDescriptionHtml = "I’m your Performance Partner at Leanstance, base
 const hobbies: ResumeHobby[] = [
   {
     icon: "hiking",
-    title: "Hiking"
+    title: "Hiking",
+    picture: { src: `${ASSET_ROOT}/images/hobbies/hiking.jpeg`, alt: "Me on the mountain behind our farm, one of my favorite places to hike" }
   },
   {
     icon: "suitcase-rolling",
-    title: "Travel"
+    title: "Travel",
+    picture: { src: `${ASSET_ROOT}/images/hobbies/travel.jpeg`, alt: "Me responding to my husband during a big city weekend trip" }
   },
   {
     icon: "dog",
-    title: "Dogs"
+    title: "Dogs",
+    picture: { src: `${ASSET_ROOT}/images/hobbies/dog.jpeg`, alt: "Our lovely flat coat appropriately named Happy" }
   },
   {
     icon: "campground",
-    title: "Glamping"
+    title: "Glamping",
+    picture: { src: `${ASSET_ROOT}/images/hobbies/camping.jpeg`, alt: "My glamping project on the farm" }
   },
   {
     icon: "utensils",
-    title: "Cooking"
+    title: "Cooking",
+    picture: { src: `${ASSET_ROOT}/images/hobbies/food.jpeg`, alt: "I love to cook and enjoy making sourdough bread" }
   }
 ];
 

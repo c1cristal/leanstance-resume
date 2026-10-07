@@ -66,12 +66,22 @@
   object-fit: contain;
 }
 
+/* width: 0 with min-width: 100% lets the caption wrap to the photo's width instead of widening the card. */
 .figure figcaption {
+  box-sizing: border-box;
+  width: 0;
+  min-width: 100%;
   padding: 0.75em 1em;
   text-align: center;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 1.4;
   color: var(--resume-text-heading-muted);
+}
+
+.figure figcaption strong {
+  font-weight: 600;
+  color: var(--resume-primary);
 }
 
 .close {
@@ -84,7 +94,7 @@
   width: 36px;
   height: 36px;
   padding: 0;
-  border: 0;
+  border: 2px solid rgb(255 255 255 / 0.85);
   border-radius: 50%;
   background: rgb(0 0 0 / 0.6);
   color: #fff;
