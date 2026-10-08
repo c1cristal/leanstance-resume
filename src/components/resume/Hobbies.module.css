@@ -79,11 +79,6 @@
   color: var(--resume-text-heading-muted);
 }
 
-.figure figcaption strong {
-  font-weight: 600;
-  color: var(--resume-primary);
-}
-
 .close {
   position: absolute;
   top: 10px;
