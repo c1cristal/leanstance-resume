@@ -64,7 +64,7 @@ const ui: ResumeContent["ui"] = {
     backgroundAlt: "Bakgrunnssirkel",
     bubbleAlt: "Velkomstboble",
   },
-  about: { title: "Om meg", hobbies: "Hobbyer", closePicture: "Lukk bildet" },
+  about: { title: "Om meg", hobbies: "Hobbyer", closePicture: "Lukk bildet", learnMore: "Les mer" },
   experience: { title: "Erfaring" },
   education: { title: "Utdanning og sertifiseringer", degrees: "Utdanning", certifications: "Sertifiseringer", credentialId: "Sertifikat-ID" },
   offerings: { title: "Tjenester" },
@@ -95,23 +95,56 @@ const ui: ResumeContent["ui"] = {
   },
 };
 
-const aboutDescriptionHtml = "Jeg er din Performance Partner hos Leanstance, med base i Nordmøre. Jeg har over 25 års erfaring fra telekommunikasjons- og finansbransjen, fra roller innen utvikling og systemarbeid til å coache team og ledere gjennom komplekse leveranseprosjekter. Jeg har jobbet med team i USA, Australia, India, Europa og Norden.<br><br>Erfaringen min omfatter å bistå Capgemini i kontraktsforhandlingene med Volvo, å støtte Yaras agile transformasjon i infrastrukturteamet, å jobbe som agile coach for et stort kjernebankprogram i Nordea, og å jobbe som Scrum Master, applikasjonsansvarlig og utvikler hos Hi3G.<br><br>Jeg hjelper team med å komme ut av «autopilot». Jeg bruker Lean- og agile prinsipper, systemtenkning og en direkte, verdibasert tilnærming for å avdekke de virkelige hindringene – og skape rom for bedre samarbeid, raskere læring og løsninger som faktisk lar seg levere.<br><br>Jeg fasiliterer opplæring og workshops, stiller de vanskelige spørsmålene og viser i praksis at det finnes alternative arbeidsmåter. Som coach på GreenTechSee-hackathonet veileder jeg team som skal komme fra en problemstilling til en fungerende prototype på bare 68 timer. Jeg hjelper dem med å definere kjerneproblemet, organisere arbeidet, håndtere friksjon og holde kursen når tiden blir knapp.";
+const aboutDescriptionHtml = "Jeg er din Performance Partner hos Leanstance, med base i Nordmøre. Jeg har over 25 års erfaring fra telekommunikasjons- og finansbransjen, fra roller innen utvikling og systemarbeid til å coache team og ledere gjennom komplekse leveranseprosjekter. Jeg har jobbet med team i USA, Australia, India, Europa og Norden.<br><br>Erfaringen min omfatter å bistå Capgemini i kontraktsforhandlingene med Volvo, å støtte Yaras agile transformasjon i infrastrukturteamet, å jobbe som {{agile-coach}} for et stort kjernebankprogram i Nordea, og å jobbe som {{scrum-master}}, applikasjonsansvarlig og utvikler hos Hi3G.<br><br>Jeg hjelper team med å komme ut av «autopilot». Jeg bruker {{lean}}- og {{agile}} prinsipper, {{systems-thinking}} og en direkte, verdibasert tilnærming for å avdekke de virkelige hindringene – og skape rom for bedre samarbeid, raskere læring og løsninger som faktisk lar seg levere.<br><br>Jeg fasiliterer opplæring og workshops, stiller de vanskelige spørsmålene og viser i praksis at det finnes alternative arbeidsmåter. Som coach på GreenTechSee-hackathonet veileder jeg team som skal komme fra en problemstilling til en fungerende prototype på bare 68 timer. Jeg hjelper dem med å definere kjerneproblemet, organisere arbeidet, håndtere friksjon og holde kursen når tiden blir knapp.";
+
+const glossary: ResumeContent["glossary"] = {
+  "agile-coach": {
+    label: "agile coach",
+    definition: "En agile coach hjelper enkeltpersoner, team og organisasjoner med å ta i bruk en kulturendring basert på velprøvde, menneskesentrerte agile prinsipper, praksiser og verdier.",
+    href: "https://www.scrumalliance.org/agile-coaching",
+  },
+  "scrum-master": {
+    label: "Scrum Master",
+    definition: "Veiled team og organisasjoner til suksess med scrum. Med scrum master-kompetanse kan du åpne nye muligheter i enhver karriere.",
+    href: "https://www.scrumalliance.org/what-is-a-scrum-master",
+  },
+  lean: {
+    label: "Lean",
+    definition: "Lean er et sett med ledelsespraksiser som raskt leverer verdi til kundene ved å kutte forsinkelser og sløsing, forbedre kvaliteten og redusere kostnadene. Det hviler på to pilarer: respekt for mennesker og kontinuerlig forbedring.",
+    href: "https://www.lean.org/explore-lean/what-is-lean/",
+  },
+  agile: {
+    label: "agile",
+    definition: "Agile er en fleksibel, iterativ tilnærming til prosjektledelse som verdsetter mennesker, tilbakemeldinger fra kunder og fungerende løsninger høyere enn rigide prosesser. Team tilpasser praksisene til sine behov og blander rammeverk som Scrum og Kanban, og vurderer jevnlig hva som fungerer for å bli stadig bedre.",
+    href: "https://www.atlassian.com/agile",
+  },
+  "systems-thinking": {
+    label: "systemtenkning",
+    definition: "Systemtenkning er en måte å forstå hvordan de sammenhengende delene av en virksomhet og omgivelsene dens samspiller for å skape resultater. I stedet for å behandle problemer isolert ser den på relasjonene og strukturene som knytter organisasjonen sammen til en helhet.",
+    href: "https://executive.mit.edu/blog/what-is-systems-thinking-in-business.html",
+  },
+  "gasb-31": {
+    label: "GASB 31",
+    definition: "GASB-uttalelse nr. 31: Regnskapsføring og finansiell rapportering for visse investeringer og for eksterne investeringspooler",
+    href: "https://gasb.org/page/ShowPdf?path=GASBS-31.pdf&title=GASB%20STATEMENT%20NO.%2031,%20ACCOUNTING%20AND%20FINANCIAL%20REPORTING%20FOR%20CERTAIN%20INVESTMENTS%20AND%20FOR%20EXTERNAL%20INVESTMENT%20POOLS",
+  },
+};
 
 const hobbies: ResumeHobby[] = [
   {
     icon: "hiking",
     title: "Fotturer",
-    picture: { src: `${ASSET_ROOT}/images/hobbies/hiking.jpeg`, alt: "Meg på fjellet bak gården vår, et av mine favorittsteder å gå tur" }
+    picture: { src: `${ASSET_ROOT}/images/hobbies/hiking.jpeg`, alt: "På fjellet bak gården vår er truger vennen min om vinteren" }
   },
   {
     icon: "suitcase-rolling",
     title: "Reiser",
-    picture: { src: `${ASSET_ROOT}/images/hobbies/travel.jpeg`, alt: "Meg som svarer mannen min under en weekendtur til en storby" }
+    picture: { src: `${ASSET_ROOT}/images/hobbies/travel.jpeg`, alt: "Svarer mannen min under en weekendtur til en storby" }
   },
   {
     icon: "dog",
     title: "Hunder",
-    picture: { src: `${ASSET_ROOT}/images/hobbies/dog.jpeg`, alt: "Vår herlige flatcoat som passende nok heter Happy" }
+    picture: { src: `${ASSET_ROOT}/images/hobbies/dog.jpeg`, alt: "Vår herlige flatcoat, passende nok kalt Happy" }
   },
   {
     icon: "campground",
@@ -149,7 +182,7 @@ const experiences: ResumeExperience[] = [
     city: "Austin, Texas",
     country: "USA",
     role: "Regnskapsfører",
-    descriptionHtml: "<b>LCRA</b> er det offentlige kraftselskapet i Texas, som betjener delstaten gjennom vannforvaltning, energi og samfunnstjenester.<br><br><ul><li>Forvaltet investeringsregnskapet for en portefølje på over 900 millioner dollar, i tråd med GASB 31.</li><li>Bygde et MS Access-system som automatiserte import av bankdata og avstemming av betalinger, og kuttet avstemmingstiden med to tredjedeler.</li><li>Bidro til å utarbeide og presentere resultatregnskapet og balansen for Texas’ lovgivende forsamling hvert kvartal, og hjalp dermed LCRA med å oppfylle kravene til offentlig rapportering.</li></ul>",
+    descriptionHtml: "<b>LCRA</b> er det offentlige kraftselskapet i Texas, som betjener delstaten gjennom vannforvaltning, energi og samfunnstjenester.<br><br><ul><li>Forvaltet investeringsregnskapet for en portefølje på over 900 millioner dollar, i tråd med {{gasb-31}}.</li><li>Bygde et MS Access-system som automatiserte import av bankdata og avstemming av betalinger, og kuttet avstemmingstiden med to tredjedeler.</li><li>Bidro til å utarbeide og presentere resultatregnskapet og balansen for Texas’ lovgivende forsamling hvert kvartal, og hjalp dermed LCRA med å oppfylle kravene til offentlig rapportering.</li></ul>",
     technologies: ["MS Excel", "MS Access", "MS Word", "MS PowerPoint"],
     medias: [
       {
@@ -180,7 +213,7 @@ const experiences: ResumeExperience[] = [
     city: "Austin, Texas",
     country: "USA",
     role: "Tariffanalytiker",
-    descriptionHtml: "<b>LCRA</b> er det offentlige kraftselskapet i Texas, som betjener delstaten gjennom vannforvaltning, energi og samfunnstjenester.<br><br><ul><li>Omstrukturerte prisingen for fire kommunale forsyningsselskaper og ett elektrisk andelslag, og anbefalte målere som tar betalt for topp- og lavlasttimer slik at avgiftene fulgte forbruket.</li><li>Anbefalte skreddersydde tariffer for husholdnings-, bedrifts- og høylastkunder, fra bilforhandlere til kirker og fabrikker.</li><li>Presenterte funnene for bystyrer og hjalp til med å innføre de nye tariffene, slik at byene fikk en inntektskilde utover politiets bøteinntekter.</li></ul>",
+    descriptionHtml: "<b>LCRA</b> er det offentlige kraftselskapet i Texas, som betjener delstaten gjennom vannforvaltning, energi og samfunnstjenester.<br><br><ul><li>Omstrukturerte prisingen for fire kommunale forsyningsselskaper og ett elektrisk andelslag, og anbefalte elektroniske målere som tar betalt for topp- og lavlasttimer slik at avgiftene fulgte forbruket.</li><li>Anbefalte skreddersydde tariffer for husholdnings-, bedrifts- og høylastkunder, fra bilforhandlere til kirker og fabrikker.</li><li>Presenterte funnene for bystyrer og hjalp til med å innføre de nye tariffene, slik at byene fikk en inntektskilde utover politiets bøteinntekter.</li></ul>",
     technologies: ["MS Excel", "MS Access", "MS Word", "MS PowerPoint"],
     medias: [
       {
@@ -238,7 +271,7 @@ const experiences: ResumeExperience[] = [
     city: "Plano, Texas",
     country: "USA",
     role: "Programmeringsanalytiker",
-    descriptionHtml: "<b>Allegiance Telecom</b>, en teleoperatør for bedrifter som ble kjøpt opp av <b>XO Communications</b> i 2004.<br><br><ul><li>Kuttet konfigurasjonstiden for tilleggsprodukter for telefonbruk fra over to uker til under én dag ved å lage et fleksibelt rammeverk.</li><li>Koordinerte automatiseringen av oppsigelse og salg av flere produkter på et felles rammeverk.</li><li>Laget og testet tale- og dataprodukter ut fra Markedsføringens krav, blant annet bruksprisplaner som gjør bryterdata om til fakturerbare CDR-avgifter i tråd med PUC- og forretningsregler.</li><li>Bygde et rapportrammeverk i SQL Server som hjalp ledelsen med å oppfylle kundenes servicenivåavtaler.</li></ul>",
+    descriptionHtml: "<b>Allegiance Telecom</b>, en teleoperatør for bedrifter som ble kjøpt opp av <b>XO Communications</b> i 2004.<br><br><ul><li>Kuttet konfigurasjonstiden for tilleggsprodukter for telefonbruk fra over to uker til under én dag ved å lage et fleksibelt rammeverk.</li><li>Koordinerte automatiseringen av oppsigelse og salg av flere produkter på et felles rammeverk.</li><li>Laget og testet tale- og dataprodukter ut fra Markedsføringens krav, blant annet bruksprisplaner som gjør bryterdata om til fakturerbare CDR-avgifter i tråd med Public Utility Commission (PUC) og forretningsregler.</li><li>Bygde et rapportrammeverk i SQL Server som hjalp ledelsen med å oppfylle kundenes servicenivåavtaler.</li></ul>",
     technologies: ["Singl.eView CB", "Perl", "SQL Server"],
     medias: [],
     backgroundUrl: `${ASSET_ROOT}/images/experience/dallas-skyline.jpg`
@@ -251,7 +284,7 @@ const experiences: ResumeExperience[] = [
     endAt: "09-30-2005",
     city: "Plano, Texas",
     country: "USA",
-    role: "Senior programmeringsanalytiker (konsulent)",
+    role: "Konsulent: Senior programmeringsanalytiker",
     descriptionHtml: "<b>Electronic Data Systems (EDS)</b> var et amerikansk IT-tjenesteselskap med base i Plano, Texas, kjøpt opp av Hewlett-Packard i 2008.<br><br><ul><li>Ledet den tekniske leveransen av en seks måneder lang implementering av Singl.eView Convergent Billing (CB) for en stor amerikansk bank, fra krav via design og konfigurasjon til testing.</li><li>Automatiserte betalinger med et sanntidsgrensesnitt mellom CB og flere finansinstitusjoner som justerte beløp ved avviste transaksjoner.</li><li>Leverte et nytt rammeverk for bruk og et finansielt rapporteringssystem for en stor finanskonto.</li><li>Verifiserte hvert prosjekt gjennom endringskontroll, testplaner og strengtesting.</li><li>Bidro til å planlegge produktveikartet sammen med produktledelsen, og presenterte arkitektur og retning for interne team, kunder og potensielle kunder.</li></ul>",
     technologies: ["Singl.eView CB", "Testplanlegging", "Endringskontroll"],
     medias: [],
@@ -265,8 +298,8 @@ const experiences: ResumeExperience[] = [
     endAt: "04-30-2006",
     city: "Brisbane",
     country: "Australia",
-    role: "Senior konfigurasjonsspesialist (konsulent)",
-    descriptionHtml: "<b>Intec</b> var en britisk leverandør av fakturerings- og forretningsstøtteprogramvare til teleoperatører, mest kjent for plattformen Singl.eView Convergent Billing (CB).<br><br><ul><li>Designet og konfigurerte CB for Carphone Warehouse.</li><li>Koblet Cordiant til CB ved å designe API-løsninger ut fra kravene og lage XML-skjemaene (XSD) for Tibco-adapteren.</li><li>Ledet rapporterings- og grensesnittteamet og veiledet 12 medlemmer av offshore-teamet gjennom enhetstesting av de Perl-baserte rapportene og grensesnittene som kjøres fra CB.</li><li>Gjennomgikk dokumenter, konfigurasjon og enhetstestplaner for å sikre nøyaktighet og fullstendighet.</li></ul>",
+    role: "Konsulent: Senior konfigurasjonsspesialist",
+    descriptionHtml: "<b>Intec</b> var en britisk leverandør av fakturerings- og forretningsstøtteprogramvare til teleoperatører, mest kjent for plattformen Singl.eView Convergent Billing (CB).<br><br><ul><li>Designet og konfigurerte CB for <a href=\"https://www.carphonewarehouse.com\" target=\"_blank\" rel=\"noopener noreferrer\">Carphone Warehouse</a>.</li><li>Koblet Cordiant til CB ved å designe API-løsninger ut fra kravene og lage XML-skjemaene (XSD) for Tibco-adapteren.</li><li>Ledet rapporterings- og grensesnittteamet og veiledet 12 medlemmer av offshore-teamet gjennom enhetstesting av de Perl-baserte rapportene og grensesnittene som kjøres fra CB.</li><li>Gjennomgikk dokumenter, konfigurasjon og enhetstestplaner for å sikre nøyaktighet og fullstendighet.</li></ul>",
     technologies: ["Singl.eView CB", "XML / XSD", "Tibco", "Perl"],
     medias: [],
     backgroundUrl: `${ASSET_ROOT}/images/experience/intec-brisbane-tower.jpg`,
@@ -280,8 +313,8 @@ const experiences: ResumeExperience[] = [
     endAt: "09-30-2006",
     city: "Bangalore",
     country: "India",
-    role: "Senior CB-konfigurasjonsspesialist / rådgiver (konsulent)",
-    descriptionHtml: "<b>Intec</b>, den britiske programvareleverandøren bak Singl.eView Convergent Billing (CB).<br><br><ul><li>Veiledet Bangalore-teamet i å implementere en CB-fase for en nigeriansk telekomkunde.</li><li>Veiledet og rådet det nye utkontraktede teamet, inkludert prosjektledere og programmerere, om ferdighetene og metodene som trengs for å gjennomføre prosjektplanen.</li><li>Var bindeleddet mellom ledelsen i vest og de ansatte i Bangalore, og forbedret offshore-driften på tvers av kulturelle forskjeller og tidssoner.</li><li>Gjorde Bangalore-kontoret selvstendig i CB-prosjektet ved å fokusere på prosessen, og skrev prosedyrer for å sikre at teamet forsto og fulgte dem.</li></ul>",
+    role: "Konsulent: Senior CB-konfigurasjonsspesialist / rådgiver",
+    descriptionHtml: "<b>Intec</b>, den britiske programvareleverandøren bak Singl.eView Convergent Billing (CB). Singl.eView har skiftet eiere flere ganger, fra ADC til Intec, deretter til CSG, og senest til NEC.<br><br><ul><li>Veiledet Bangalore-teamet i å implementere en CB-fase for <a href=\"https://www.mtn.ng\" target=\"_blank\" rel=\"noopener noreferrer\">MTN Nigeria</a>.</li><li>Veiledet og rådet det nye utkontraktede teamet, inkludert prosjektledere og programmerere, om ferdighetene og metodene som trengs for å gjennomføre prosjektplanen.</li><li>Var bindeleddet mellom ledelsen i vest og de ansatte i Bangalore, og forbedret offshore-driften på tvers av kulturelle forskjeller og tidssoner.</li><li>Gjorde Bangalore-kontoret selvstendig i CB-prosjektet ved å fokusere på prosessen, og skrev prosedyrer for å sikre at teamet forsto og fulgte dem.</li></ul>",
     technologies: ["Singl.eView CB"],
     medias: [],
     backgroundUrl: `${ASSET_ROOT}/images/experience/bangalore-glass-house.jpg`,
@@ -295,8 +328,8 @@ const experiences: ResumeExperience[] = [
     endAt: "04-30-2008",
     city: "Stockholm",
     country: "Sverige",
-    role: "Senior konfigurasjonsspesialist (konsulent)",
-    descriptionHtml: "<b>Tele2s</b> misjon er å tilby rimelig og enkel tilkobling for alle, når som helst.<br><br><ul><li>Utviklet innenfor rammeverket Singl.eView Convergent Billing (CB) i avdelingen Applications Enhancements, med analyse, design og arkitektur, løsningsforslag, implementering og enhetstesting av EPM-kode.</li><li>Utviklet sammen med teamet et integrert meldingssystem med en JMS-meldingsserver for kommunikasjon mellom flere applikasjoner.</li><li>Dokumenterte utviklingsprosesser på en wiki for å fremme effektiv bruk av tid og dele informasjon på tvers av fagområder.</li></ul>",
+    role: "Konsulent: Senior konfigurasjonsspesialist",
+    descriptionHtml: "<b>Tele2s</b> misjon er å tilby rimelig og enkel tilkobling for alle, når som helst.<br><br><ul><li>Utviklet innenfor rammeverket Singl.eView Convergent Billing (CB) i avdelingen Applications Enhancements, med analyse, design og arkitektur, løsningsforslag, implementering og enhetstesting av kode for Expression Parser Module (EPM).</li><li>Utviklet sammen med teamet et integrert meldingssystem med Java Message Service (JMS) for kommunikasjon mellom flere applikasjoner.</li><li>Dokumenterte utviklingsprosesser på en wiki for å fremme effektiv bruk av tid og dele informasjon på tvers av fagområder.</li></ul>",
     technologies: ["Singl.eView CB", "EPM", "JMS", "Perl", "Wiki"],
     medias: [
       {
@@ -330,7 +363,7 @@ const experiences: ResumeExperience[] = [
     endAt: "11-30-2008",
     city: "Sydney",
     country: "Australia",
-    role: "Løsningsdesigner",
+    role: "Konsulent: Løsningsdesigner",
     descriptionHtml: "<b>Hutchison 3G Australia</b> lanserte Australias første 3G-mobilnett og -tjenester i 2003 under merkevaren 3.<br><br><ul><li>Analyserte infrastrukturen sammen med teamet og ga råd om hvordan flere forretningssystemer kunne integreres, blant annet Singl.eView Convergent Billing (CB), PeopleSoft, Tallyman, trykkeriet og mediering.</li><li>Leverte ende-til-ende-løsninger for viktige Hutch-prosjekter, blant annet klargjøring og fakturering av mobilforsikring og fleksible rabatter på tariffer.</li><li>Hjalp Billing Operations med løsninger rundt eksisterende omveier, blant annet rotårsaksanalyse av symptomer og råd om estimert kostnad og tidsramme for automatiserte faktureringsalternativer.</li><li>Leverte overordnede analyser av prosjekter i pipeline: berørte systemer, estimert implementeringskostnad per system og estimert tid til ferdigstillelse.</li></ul>",
     technologies: ["Singl.eView CB", "PeopleSoft", "Tallyman", "Mediation"],
     medias: [],
@@ -416,8 +449,8 @@ const experiences: ResumeExperience[] = [
     endAt: "09-30-2011",
     city: "Stockholm",
     country: "Sverige",
-    role: "Senior utviklerkonsulent",
-    descriptionHtml: "<b>Tre</b> (Hi3G Access) er en av Sveriges største mobilnettoperatører og tilbyr mobiltelefoni og bredbånd til privat- og bedriftskunder.<br><br><ul><li>Oppgraderte Singl.eView Convergent Billing (CB) fra v5.01 til v6.01.</li><li>Leverte løsningsdesign til offshore-teamet basert på funksjonelle krav.</li><li>Innførte prosessforbedringer i utviklingsteamet for å bedre kodekvaliteten.</li></ul>",
+    role: "Konsulent: Senior utvikler",
+    descriptionHtml: "<b>Tre</b> (Hi3G Access) er en av Sveriges største mobilnettoperatører og tilbyr mobiltelefoni og bredbånd til privat- og bedriftskunder.<br><br><ul><li>Bidro til oppgraderingen av Singl.eView Convergent Billing (CB) fra v5.01 til v6.01.</li><li>Leverte løsningsdesign til offshore-teamet basert på funksjonelle krav.</li><li>Innførte prosessforbedringer i utviklingsteamet for å bedre kodekvaliteten.</li></ul>",
     technologies: ["Singl.eView CB"],
     medias: [
       {
@@ -452,8 +485,8 @@ const experiences: ResumeExperience[] = [
     endAt: "12-31-2012",
     city: "Stockholm",
     country: "Sverige",
-    role: "CB-applikasjonsansvarlig (konsulent)",
-    descriptionHtml: "<b>Tre</b> (Hi3G Access), en av Sveriges største mobilnettoperatører.<br><br><ul><li>Bidro til å starte prosjektet for stabilitet i fakturering (Billing), blant annet vurdering av rammeverk og opprydding i koden.</li><li>Sto til ansvar overfor eksterne grupper for leveransene i Billing.</li><li>Laget en strømlinjeformet releaseprosess for å få kontroll over hva som ble satt i produksjon, blant annet ved å innføre kodegjennomgang og automatisert enhetstesting.</li><li>Koordinerte utviklings- og releaseleveranser mellom eksterne utviklingsgrupper og Billing.</li><li>Tok initiativ til endringer i trunk- og branch-miljøene for å gi stabilitet til testløpene.</li><li>Opprettet et forum for Singl.eView Convergent Billing (CB) for å utdanne, informere og brainstorme om Billing-saker sammen med det tverrfaglige teamet for Billing (Cross Functional Team, CFT) og andre eksterne CFT-er.</li></ul>",
+    role: "Konsulent: CB-applikasjonsansvarlig",
+    descriptionHtml: "<b>Tre</b> (Hi3G Access), en av Sveriges største mobilnettoperatører.<br><br><ul><li>Bidro til å starte prosjektet for stabilitet i fakturering (Billing), blant annet vurdering av rammeverk og opprydding i koden.</li><li>Sto til ansvar overfor eksterne grupper for leveransene i Billing.</li><li>Laget en strømlinjeformet releaseprosess for å få kontroll over hva som ble satt i produksjon, blant annet ved å innføre kodegjennomgang og automatisert enhetstesting.</li><li>Koordinerte utviklings- og releaseleveranser mellom eksterne utviklingsgrupper og Billing.</li><li>Tok initiativ til endringer i trunk- og branch-miljøene for å gi stabilitet til testløpene.</li><li>Innførte et forum for Singl.eView Convergent Billing (CB) for å utdanne, informere og brainstorme om Billing-saker sammen med det tverrfaglige teamet for Billing (Cross Functional Team, CFT) og andre eksterne CFT-er.</li></ul>",
     technologies: ["Singl.eView CB", "Kodegjennomgang", "Release-styring"],
     medias: [
       {
@@ -488,7 +521,7 @@ const experiences: ResumeExperience[] = [
     endAt: "06-30-2014",
     city: "Stockholm",
     country: "Sverige",
-    role: "Agile endringsagent / CB-applikasjonsansvarlig (konsulent)",
+    role: "Konsulent: Agile endringsagent / CB-applikasjonsansvarlig",
     descriptionHtml: "<b>Tre</b> (Hi3G Access), en av Sveriges største mobilnettoperatører.<br><br><ul><li>Innførte nye arbeidsmåter og støttet faktureringsavdelingen i å bli bedre ved hjelp av agile og Lean-teknikker og -prosesser.</li><li>Begynte å innføre en agil prosess, etter føringer fra forretningen, for å korte ned tiden til marked (TTM).</li><li>Gikk foran med et godt eksempel under overgangen fra fossefall til en agil forretningspraksis.</li><li>Hjalp nylig opprettede tverrfaglige team (CFT-er) med å fungere som selvstendige, sammenhengende enheter.</li><li>Bidro til å innføre Kanban for utviklingsgruppen i Billing.</li><li>Tok initiativ til en daglig stand-up for å løse saker utenfor de agile funksjonsgruppene.</li><li>Laget et verktøy for kontinuerlig integrasjon.</li><li>Holdt release-planene og håndterte samtidig forretningens forventninger til nye krav.</li><li>Brukte en wiki til å dokumentere endrede prosesser og oppmuntret til å bruke den for raskt å dokumentere krav og releaseartefakter.</li></ul>",
     technologies: ["Agile", "Lean", "Kanban", "Kontinuerlig integrasjon", "Wiki"],
     medias: [
@@ -524,7 +557,7 @@ const experiences: ResumeExperience[] = [
     endAt: "2015",
     city: "Stockholm",
     country: "Sverige",
-    role: "Agile coach / senior utviklerkonsulent",
+    role: "Konsulent: Agile coach / senior utvikler",
     descriptionHtml: "<b>Tre</b> (Hi3G Access), en av Sveriges største mobilnettoperatører.<br><br><ul><li>Hjalp teamet med å gå fra Kanban til Scrum.</li><li>Fasiliterte agile artefakter for teamet, blant annet backlog grooming, sprintplanlegging og visualisering av arbeid.</li><li>Oppmuntret til parprogrammering og flere «tenk utenfor boksen»-arbeidsmåter.</li><li>Bidro til teamets motivasjon ved å gi folk myndighet til å ta egne avgjørelser, og tok selv på meg noen av de mindre «morsomme» oppgavene slik at teamet kunne konsentrere seg om ny og spennende utvikling.</li></ul>",
     technologies: ["Agile", "Scrum", "Kanban", "Parprogrammering"],
     medias: [
@@ -603,7 +636,7 @@ const experiences: ResumeExperience[] = [
     endAt: "2022",
     city: "Digitalt fra Averøy",
     country: "Norge",
-    role: "Senior agile coach",
+    role: "Konsulent: Senior agile coach",
     descriptionHtml: "<b>Capgemini</b> er en global leder innen rådgivning, teknologi og ingeniørtjenester; dette oppdraget var for <b>Yara</b>, hvis misjon er å mette verden på en ansvarlig måte og beskytte planeten.<br><br><ul><li>Brukte Lean/agile-konsepter for å oppmuntre en avdeling til å sette i gang en endringsprosess for å tilpasse IT-systemer og rutiner.</li><li>Motiverte til å tette gapet mellom leverandør og kunde gjennom et felles veikart og mer samarbeid.</li><li>Jobbet med de delene av organisasjonen som ville utforske flere agile og Lean arbeidsmåter.</li></ul>",
     technologies: ["Lean", "Agile"],
     medias: [
@@ -638,7 +671,7 @@ const experiences: ResumeExperience[] = [
     endAt: "2022",
     city: "Digitalt fra Averøy",
     country: "Norge",
-    role: "Senior agile coach",
+    role: "Konsulent: Senior agile coach",
     descriptionHtml: "<b>Capgemini</b> er en global leder innen rådgivning, teknologi og ingeniørtjenester; dette oppdraget var for <b>Volvo Group</b>, en svensk produsent av lastebiler, busser og anleggsmaskiner.<br><br><ul><li>Samlet agile coacher og Release Train Engineers (RTE-er) fra flere leverandører ved å etablere et praksisfellesskap (community of practice, CoP).</li><li>Bidro til å starte et nytt prosjekt ved å gi veiledning og organisere planleggingsmøter.</li><li>Utviklet og fasiliterte en opplæringsøkt for å få alle leverandørene med på agile arbeidsmåter.</li><li>Bistod i kontraktsforhandlinger for å gå bort fra prosjektbaserte leveranser.</li><li>Jobbet med ledelsen for å bygge forståelse for «Hva er agilt?».</li></ul>",
     technologies: ["Agile", "Praksisfellesskap", "Release Train Engineer"],
     medias: [
@@ -825,6 +858,7 @@ export const no: ResumeContent = {
   site,
   ui,
   aboutDescriptionHtml,
+  glossary,
   hobbies,
   aboutMedias,
   experiences,

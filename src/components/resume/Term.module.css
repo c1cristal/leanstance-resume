@@ -1,0 +1,50 @@
+.term {
+  position: relative;
+}
+
+/* Looks like the surrounding text, with a dotted underline to show it can be opened. */
+.trigger {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 4px;
+}
+
+.trigger:hover,
+.trigger:focus-visible {
+  color: var(--resume-primary);
+}
+
+.popover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  display: block;
+  width: min(320px, 80vw);
+  margin-top: 6px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background-color: var(--resume-surface);
+  box-shadow: 0 2px 14px var(--resume-shadow);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4em;
+  text-align: left;
+  color: var(--resume-text-body);
+}
+
+.popover[hidden] {
+  display: none;
+}
+
+.popover a {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: var(--resume-primary);
+}

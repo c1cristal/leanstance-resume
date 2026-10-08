@@ -79,7 +79,7 @@ export interface ResumeUi {
   copyright: string;
   nav: { about: string; experience: string; education: string; offerings: string; contact: string; openPdf: string };
   welcome: { hello: string; backgroundAlt: string; bubbleAlt: string };
-  about: { title: string; hobbies: string; closePicture: string };
+  about: { title: string; hobbies: string; closePicture: string; learnMore: string };
   experience: { title: string };
   education: { title: string; degrees: string; certifications: string; credentialId: string };
   offerings: { title: string };
@@ -124,12 +124,21 @@ export interface ResumeCertification {
   credentialId?: string;
 }
 
+// A term in the resume text that opens a small popover with a definition and an optional link.
+// The text refers to it with a {{key}} token (see aboutDescriptionHtml).
+export interface ResumeTerm {
+  label: string;
+  definition: string;
+  href?: string;
+}
+
 export interface ResumeContent {
   locale: Locale;
   personal: ResumePersonal;
   site: ResumeSite;
   ui: ResumeUi;
   aboutDescriptionHtml: string;
+  glossary: Record<string, ResumeTerm>;
   hobbies: ResumeHobby[];
   aboutMedias: ResumeMedia[];
   experiences: ResumeExperience[];
