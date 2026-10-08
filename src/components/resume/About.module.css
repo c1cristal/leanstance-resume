@@ -55,6 +55,20 @@
   line-height: 1.5em;
 }
 
+/* Company links in the text: the site colour, and the same colour once visited. The glossary popover's own link is not
+   a direct child of these spans, so it keeps its own style. */
+.aboutContainer .firstColumn p.text > span > a,
+.aboutContainer .firstColumn p.text > span > a:visited {
+  color: var(--resume-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.aboutContainer .firstColumn p.text > span > a:hover,
+.aboutContainer .firstColumn p.text > span > a:focus-visible {
+  color: var(--resume-icon-hover);
+}
+
 .secondColumn {
   flex-grow: 1;
 }

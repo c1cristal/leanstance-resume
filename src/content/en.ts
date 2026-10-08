@@ -94,7 +94,7 @@ const ui: ResumeContent["ui"] = {
   },
 };
 
-const aboutDescriptionHtml = "I’m your Performance Partner at Leanstance, based in the Nordmøre region. Over 25 years in telecommunications and finance have taken me from development and systems work to coaching teams and leaders through complex delivery, with teams across the US, Australia, India, Europe and the Nordics.<br><br>Highlights include coaching a major core banking program at Nordea as an {{agile-coach}}, supporting Yara’s agile transformation, and working as a {{scrum-master}} at Hi3G.<br><br>Teams often run on “autopilot”. {{lean}} and {{agile}} principles, {{systems-thinking}} and a direct, value-based approach help uncover the real obstacles, leaving room for better collaboration, faster learning and solutions that are genuinely deliverable. As a coach at the GreenTechSee hackathon, I mentor teams from problem statement to working prototype in just 68 hours.";
+const aboutDescriptionHtml = "I’m your Performance Partner at Leanstance, based in the Nordmøre region. Over 25 years in telecommunications and finance have taken me from development and systems work to coaching teams and leaders through complex delivery, with teams across the US, Australia, India, Europe and the Nordics.<br><br>Highlights include assisting <a href=\"https://www.capgemini.com\" target=\"_blank\" rel=\"noopener noreferrer\">Capgemini</a> with <a href=\"https://www.volvogroup.com\" target=\"_blank\" rel=\"noopener noreferrer\">Volvo</a> contract negotiations, coaching within a major core banking program at <a href=\"https://www.nordea.com\" target=\"_blank\" rel=\"noopener noreferrer\">Nordea</a> as an {{agile-coach}}, supporting <a href=\"https://www.yara.com\" target=\"_blank\" rel=\"noopener noreferrer\">Yara</a>’s agile transformation within a small area of the organisation, and working as a {{scrum-master}} at Hi3G (<a href=\"https://www.tre.se\" target=\"_blank\" rel=\"noopener noreferrer\">Tre</a>).<br><br>Teams often run on “autopilot”. {{lean}} and {{agile}} principles, {{systems-thinking}} and a direct, value-based approach help uncover the real obstacles, leaving room for better collaboration, faster learning and solutions that are genuinely deliverable.";
 
 const glossary: ResumeContent["glossary"] = {
   "agile-coach": {
@@ -104,8 +104,8 @@ const glossary: ResumeContent["glossary"] = {
   },
   "scrum-master": {
     label: "Scrum Master",
-    definition: "Guide teams and organizations to success with scrum. You can unlock new possibilities in any career with scrum master skills.",
-    href: "https://www.scrumalliance.org/what-is-a-scrum-master",
+    definition: "A Scrum master is the facilitator of scrum, a lightweight agile framework focusing on time-boxed iterations called sprints. Scrum masters act as coaches to the rest of the team, or servant leaders, as the Scrum Guide puts it.",
+    href: "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster",
   },
   lean: {
     label: "Lean",
@@ -162,11 +162,6 @@ const aboutMedias: ResumeMedia[] = [
     icon: "linkedin",
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/cristal.richardson/"
-  },
-  {
-    icon: "github",
-    title: "GitHub",
-    href: "https://github.com/c1cristal"
   }
 ];
 

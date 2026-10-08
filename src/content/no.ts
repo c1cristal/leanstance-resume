@@ -95,7 +95,7 @@ const ui: ResumeContent["ui"] = {
   },
 };
 
-const aboutDescriptionHtml = "Jeg er din Performance Partner hos Leanstance, med base i Nordmøre. Over 25 år innen telekommunikasjon og finans har tatt meg fra utvikling og systemarbeid til å coache team og ledere gjennom komplekse leveranser, med team i USA, Australia, India, Europa og Norden.<br><br>Høydepunkter er å ha coachet et stort kjernebankprogram i Nordea som {{agile-coach}}, støttet Yaras agile transformasjon og jobbet som {{scrum-master}} hos Hi3G.<br><br>Team går ofte på «autopilot». {{lean}}- og {{agile}} prinsipper, {{systems-thinking}} og en direkte, verdibasert tilnærming hjelper til med å avdekke de virkelige hindringene og skaper rom for bedre samarbeid, raskere læring og løsninger som faktisk lar seg levere. Som coach på GreenTechSee-hackathonet veileder jeg team fra problemstilling til fungerende prototype på bare 68 timer.";
+const aboutDescriptionHtml = "Jeg er din Performance Partner hos Leanstance, med base i Nordmøre. Over 25 år innen telekommunikasjon og finans har tatt meg fra utvikling og systemarbeid til å coache team og ledere gjennom komplekse leveranser, med team i USA, Australia, India, Europa og Norden.<br><br>Høydepunkter er blant annet å ha bistått <a href=\"https://www.capgemini.com\" target=\"_blank\" rel=\"noopener noreferrer\">Capgemini</a> i kontraktsforhandlingene med <a href=\"https://www.volvogroup.com\" target=\"_blank\" rel=\"noopener noreferrer\">Volvo</a>, coachet innenfor et stort kjernebankprogram i <a href=\"https://www.nordea.com\" target=\"_blank\" rel=\"noopener noreferrer\">Nordea</a> som {{agile-coach}}, støttet den agile transformasjonen i et lite område av <a href=\"https://www.yara.com\" target=\"_blank\" rel=\"noopener noreferrer\">Yara</a>, og jobbet som {{scrum-master}} hos Hi3G (<a href=\"https://www.tre.se\" target=\"_blank\" rel=\"noopener noreferrer\">Tre</a>).<br><br>Team går ofte på «autopilot». {{lean}}- og {{agile}} prinsipper, {{systems-thinking}} og en direkte, verdibasert tilnærming hjelper til med å avdekke de virkelige hindringene og skaper rom for bedre samarbeid, raskere læring og løsninger som faktisk lar seg levere.";
 
 const glossary: ResumeContent["glossary"] = {
   "agile-coach": {
@@ -105,8 +105,8 @@ const glossary: ResumeContent["glossary"] = {
   },
   "scrum-master": {
     label: "Scrum Master",
-    definition: "Veiled team og organisasjoner til suksess med scrum. Med scrum master-kompetanse kan du åpne nye muligheter i enhver karriere.",
-    href: "https://www.scrumalliance.org/what-is-a-scrum-master",
+    definition: "En Scrum Master er fasilitatoren av scrum, et lettvekts agilt rammeverk med fokus på tidsavgrensede iterasjoner kalt sprinter. Scrum Masters fungerer som coacher for resten av teamet, eller som tjenende ledere, slik Scrum Guide beskriver det.",
+    href: "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster",
   },
   lean: {
     label: "Lean",
@@ -163,11 +163,6 @@ const aboutMedias: ResumeMedia[] = [
     icon: "linkedin",
     title: "LinkedIn",
     href: "https://www.linkedin.com/in/cristal.richardson/"
-  },
-  {
-    icon: "github",
-    title: "GitHub",
-    href: "https://github.com/c1cristal"
   }
 ];
 
