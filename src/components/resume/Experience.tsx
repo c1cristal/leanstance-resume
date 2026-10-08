@@ -11,6 +11,7 @@ import type { ResumeContent } from "@/types/resume";
 import { formatMonthYear, formatYear } from "./dates";
 import { ExperienceTimeline } from "./ExperienceTimeline";
 import { MediaIcon } from "./MediaIcon";
+import { RichText } from "./RichText";
 import { useSwipe } from "./useSwipe";
 import styles from "./Experience.module.css";
 
@@ -58,7 +59,7 @@ function CompanyLink({ website, children }: { website?: string; children: ReactN
 }
 
 export function Experience({ content }: { content: ResumeContent }) {
-  const { experiences, ui } = content;
+  const { experiences, glossary, ui } = content;
   const LAST_POSITION = experiences.length;
   const ordered = [...experiences].sort((a, b) => b.position - a.position);
   const startDates = experiences.map((experience) => experience.startAt);
@@ -210,9 +211,11 @@ export function Experience({ content }: { content: ResumeContent }) {
                         <Location city={experience.city} country={experience.country} />
                       </div>
                     </div>
-                    <div
+                    <RichText
                       className={styles.description}
-                      dangerouslySetInnerHTML={{ __html: experience.descriptionHtml }}
+                      html={experience.descriptionHtml}
+                      glossary={glossary}
+                      learnMore={ui.about.learnMore}
                     />
                     <div className={styles.technologies}>
                       {experience.technologies.map((technology) => (
