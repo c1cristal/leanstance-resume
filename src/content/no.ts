@@ -848,6 +848,24 @@ const offerings: ResumeOffering[] = [
     descriptionHtml: "<p>Ta et steg bort fra hverdagens press og se det store bildet.</p><p>En guidet Deep Time Walk gir et team en felles, minneverdig opplevelse av tid og endring. Etterpå fasiliterer jeg en samtale om hva det betyr for teamets eget arbeid og retning.</p><ul><li>En guidet tur i naturen</li><li>Fasilitert refleksjon etterpå</li><li>Et felles perspektiv for et team som står overfor endring</li></ul>",
     pictures: [],
   },
+  {
+    title: "Verdistrømkartlegging (workshop)",
+    hidden: true,
+    descriptionHtml: "<p>Gjør det usynlige arbeidet synlig.</p><p>I en halvdagsworkshop kartlegger teamet ditt hvordan arbeidet flyter fra bestilling til levering, og vi finner ut hvor det venter, går i løkker eller forsvinner. Du går derfra med et felles bilde av den faktiske flyten og de første forsinkelsene som er verdt å fjerne.</p><ul><li>Et kart over dagens flyt, tegnet sammen av dem som gjør arbeidet</li><li>Ventetid og omarbeid gjort synlig</li><li>De få forbedringene som er mest verdt å prøve først</li></ul>",
+    pictures: [],
+  },
+  {
+    title: "Workshop om avhengigheter mellom team",
+    hidden: true,
+    descriptionHtml: "<p>Få flere team, eller flere leverandører, til å planlegge som ett.</p><p>Når team er avhengige av hverandre, sendes forsinkelser stille videre fra den ene til den andre. Jeg fasiliterer en planleggingsøkt der teamene legger frem hva de trenger av hverandre, blir enige om hvem som leverer hva og når, og oppdager risikoene før de blir hindringer.</p><ul><li>Avhengigheter mellom team og leverandører synliggjort på én tavle</li><li>Tydelige avtaler om hvem som leverer hva, og når</li><li>Risikoer og hindringer avdekket tidlig, med eiere</li></ul>",
+    pictures: [],
+  },
+  {
+    title: "Lederlabben (coaching)",
+    hidden: true,
+    descriptionHtml: "<p>Led på en måte som hjelper teamene å levere.</p><p>En liten serie økter for ledere, produkteiere og teamledere som vil gå fra å styre arbeidet til å legge til rette for det. Vi bruker deres egne situasjoner, øver på nye tilnærminger sammen, og du prøver dem ut mellom øktene.</p><ul><li>Liten gruppe, med fortrolig diskusjon av reelle situasjoner</li><li>Praktiske måter å stille bedre spørsmål, delegere og fjerne hindringer på</li><li>Eksperimenter mellom øktene og refleksjon over hva som fungerte</li></ul>",
+    pictures: [],
+  },
 ];
 
 const typingPhrases = ["Jeg er Cristal, din Performance Partner.", "Jeg coacher team til å skape mer verdi.", "Ta en titt på reisen min nedenfor."];

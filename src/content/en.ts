@@ -850,6 +850,24 @@ const offerings: ResumeOffering[] = [
     descriptionHtml: "<p>Step away from the daily pressure and see the bigger picture.</p><p>A guided Deep Time Walk gives a team a shared, memorable experience of time and change. Afterwards I facilitate a conversation about what it means for their own work and direction.</p><ul><li>A guided walk in nature</li><li>Facilitated reflection afterwards</li><li>A shared perspective for a team facing change</li></ul>",
     pictures: [],
   },
+  {
+    title: "Value Stream Mapping Workshop",
+    hidden: true,
+    descriptionHtml: "<p>Make the invisible work visible.</p><p>In a half-day workshop, your team maps how work moves from request to delivery, and we find where it waits, loops back or gets lost. You leave with a shared picture of the real flow and the first delays worth removing.</p><ul><li>A map of the current flow, drawn together by the people who do the work</li><li>Waiting time and rework made visible</li><li>The few improvements most worth trying first</li></ul>",
+    pictures: [],
+  },
+  {
+    title: "Cross-Team Dependency Workshop",
+    hidden: true,
+    descriptionHtml: "<p>Get several teams, or several suppliers, planning as one.</p><p>When teams depend on each other, delays pass quietly from one to the next. I facilitate a planning session where teams lay out what they need from each other, agree who delivers what and when, and spot the risks before they become blockers.</p><ul><li>Dependencies between teams and suppliers made visible on one board</li><li>Clear agreements on who delivers what, and when</li><li>Risks and blockers surfaced early, with owners</li></ul>",
+    pictures: [],
+  },
+  {
+    title: "Leadership Coaching Lab",
+    hidden: true,
+    descriptionHtml: "<p>Lead in a way that helps teams deliver.</p><p>A small series of sessions for managers, Product Owners and team leads who want to move from directing the work to enabling it. We use your real situations, practice new approaches together, and you try them between sessions.</p><ul><li>Small group, with confidential discussion of real situations</li><li>Practical ways to ask better questions, delegate and remove obstacles</li><li>Experiments between sessions and reflection on what worked</li></ul>",
+    pictures: [],
+  },
 ];
 
 const typingPhrases = ["I'm Cristal, your Performance Partner.", "Coaching teams to deliver more value.", "Take a look at my journey below."];
