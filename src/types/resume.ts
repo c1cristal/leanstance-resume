@@ -38,6 +38,8 @@ export interface ResumeOfferingPicture {
 
 // A product offering: one slide with a title, a description (HTML) and any number of pictures.
 export interface ResumeOffering {
+  // Stable key shared by both languages; the page order is set in src/content/offeringOrder.ts.
+  id: string;
   title: string;
   // Keeps the offering in the content but leaves it off the page until it is ready.
   hidden?: boolean;
