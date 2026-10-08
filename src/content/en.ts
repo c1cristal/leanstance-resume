@@ -825,29 +825,55 @@ const certifications: ResumeCertification[] = [
 
 const offerings: ResumeOffering[] = [
   {
+    id: "facilitator",
     title: "The Impartial Facilitator",
     descriptionHtml: "<p>A neutral outside voice for the conversations that are hard to have from the inside.</p><p>I facilitate sessions where a team breaks through a problem, reaches a decision or brainstorms new ideas. Because I have no stake in the outcome, everyone can speak freely and the group stays focused on the goal.</p><ul><li>Problem-solving and breakthrough sessions</li><li>Brainstorming and idea generation</li><li>Decisions and alignment between teams or departments</li></ul>",
     pictures: [],
   },
   {
+    id: "ice-breaker",
     title: "Ice Breaker for Events",
     hidden: true,
     descriptionHtml: "<p>Strangers become a team in minutes.</p><p>I open hackathons, conferences and public meetups with playful, high-energy ice breakers that get people talking, laughing and ready to collaborate.</p><ul><li>Hackathon kick-offs where participants meet and form teams</li><li>Conference and meetup openers</li><li>Energisers that bring the room back after a break</li></ul>",
     pictures: [],
   },
   {
+    id: "performance-check-up",
     title: "Performance Check-Up",
     descriptionHtml: "<p>Find out what is really slowing your team down.</p><p>I talk with the team and its leaders, look at how the work flows, and give you a clear picture of what is helping and what is getting in the way, along with the first improvements to try.</p><ul><li>Conversations with the team and its leaders</li><li>A clear summary of strengths and obstacles</li><li>Practical first steps, in order of priority</li></ul>",
     pictures: [],
   },
   {
+    id: "performance-sprint",
     title: "Team Performance Sprint",
     descriptionHtml: "<p>Focused, hands-on partnership with one team on one performance goal.</p><p>Working alongside the team over a set period, I help you agree the goal, try new ways of working, and build the habits that keep improving after I leave.</p><ul><li>A clear goal agreed up front</li><li>Hands-on coaching in the team's real work</li><li>Regular reflection on what is working</li><li>Habits and tools the team keeps</li></ul>",
     pictures: [],
   },
   {
+    id: "team-retreat",
     title: "Team Retreat with Deep Time Walk",
     descriptionHtml: "<p>Step away from the daily pressure and see the bigger picture.</p><p>A guided Deep Time Walk gives a team a shared, memorable experience of time and change. Afterwards I facilitate a conversation about what it means for their own work and direction.</p><ul><li>A guided walk in nature</li><li>Facilitated reflection afterwards</li><li>A shared perspective for a team facing change</li></ul>",
+    pictures: [],
+  },
+  {
+    id: "value-stream-mapping",
+    title: "Value Stream Mapping Workshop",
+    hidden: false,
+    descriptionHtml: "<p>See where the time really goes in one team's way of working.</p><p>In a half-day workshop, the team maps the steps a single piece of work takes from request to delivery, and measures how much of that time is work and how much is waiting. You leave with a shared picture of your own flow and the first waste worth removing.</p><ul><li>One team's flow mapped step by step, by the people who do the work</li><li>Working time compared with waiting time and rework</li><li>The few improvements most worth trying first</li></ul>",
+    pictures: [],
+  },
+  {
+    id: "cross-team-dependency",
+    title: "Cross-Team Dependency Workshop",
+    hidden: false,
+    descriptionHtml: "<p>Get several teams, or several suppliers, planning as one.</p><p>When teams rely on each other's deliveries, a plan only works if everyone's commitments line up. I facilitate a planning session where teams say what they need from each other, agree who delivers what and when, and flag the risks that cross team boundaries.</p><ul><li>Needs between teams and suppliers laid out on one board</li><li>Clear agreements on who delivers what, and when</li><li>Cross-team risks named early, with owners</li></ul>",
+    pictures: [],
+  },
+  {
+    id: "leadership-lab",
+    title: "Leadership Coaching Lab",
+    hidden: false,
+    descriptionHtml: "<p>Lead in a way that helps teams deliver.</p><p>A small series of sessions for managers, Product Owners and team leads who want to move from directing the work to enabling it. We use your real situations, practice new approaches together, and you try them between sessions.</p><ul><li>Small group, with confidential discussion of real situations</li><li>Practical ways to ask better questions, delegate and remove obstacles</li><li>Experiments between sessions and reflection on what worked</li></ul>",
     pictures: [],
   },
 ];

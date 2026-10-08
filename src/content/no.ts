@@ -823,29 +823,55 @@ const certifications: ResumeCertification[] = [
 
 const offerings: ResumeOffering[] = [
   {
+    id: "facilitator",
     title: "Den upartiske fasilitatoren",
     descriptionHtml: "<p>En nøytral stemme utenfra for samtaler som er vanskelige å ta innenfra.</p><p>Jeg fasiliterer økter der et team løser et problem, tar en beslutning eller kommer opp med nye ideer. Fordi jeg ikke har noen interesse i utfallet, kan alle snakke fritt, og gruppen holder fokus på målet.</p><ul><li>Problemløsning og gjennombruddsøkter</li><li>Idédugnad og idéutvikling</li><li>Beslutninger og samkjøring mellom team eller avdelinger</li></ul>",
     pictures: [],
   },
   {
+    id: "ice-breaker",
     title: "Isbryter for arrangementer",
     hidden: true,
     descriptionHtml: "<p>Fremmede blir et team i løpet av minutter.</p><p>Jeg åpner hackathons, konferanser og åpne treff med lekne isbrytere med høy energi som får folk til å snakke, le og bli klare for å samarbeide.</p><ul><li>Oppstart av hackathons der deltakerne møtes og danner team</li><li>Åpning av konferanser og treff</li><li>Energiøkter som får rommet i gang igjen etter en pause</li></ul>",
     pictures: [],
   },
   {
+    id: "performance-check-up",
     title: "Performance-sjekk",
     descriptionHtml: "<p>Finn ut hva som egentlig bremser teamet ditt.</p><p>Jeg snakker med teamet og lederne, ser på hvordan arbeidet flyter, og gir deg et tydelig bilde av hva som hjelper og hva som står i veien, sammen med de første forbedringene å prøve.</p><ul><li>Samtaler med teamet og lederne</li><li>En tydelig oppsummering av styrker og hindringer</li><li>Praktiske første steg, i prioritert rekkefølge</li></ul>",
     pictures: [],
   },
   {
+    id: "performance-sprint",
     title: "Teamets Performance-sprint",
     descriptionHtml: "<p>Fokusert, praktisk samarbeid med ett team om ett prestasjonsmål.</p><p>Sammen med teamet over en avgrenset periode hjelper jeg dere med å bli enige om målet, prøve nye arbeidsmåter og bygge vaner som fortsetter å forbedre dere etter at jeg er borte.</p><ul><li>Et tydelig mål avtalt på forhånd</li><li>Praktisk coaching i teamets faktiske arbeid</li><li>Jevnlig refleksjon over hva som fungerer</li><li>Vaner og verktøy teamet beholder</li></ul>",
     pictures: [],
   },
   {
+    id: "team-retreat",
     title: "Teamretreat med Deep Time Walk",
     descriptionHtml: "<p>Ta et steg bort fra hverdagens press og se det store bildet.</p><p>En guidet Deep Time Walk gir et team en felles, minneverdig opplevelse av tid og endring. Etterpå fasiliterer jeg en samtale om hva det betyr for teamets eget arbeid og retning.</p><ul><li>En guidet tur i naturen</li><li>Fasilitert refleksjon etterpå</li><li>Et felles perspektiv for et team som står overfor endring</li></ul>",
+    pictures: [],
+  },
+  {
+    id: "value-stream-mapping",
+    title: "Verdistrømkartlegging (workshop)",
+    hidden: false,
+    descriptionHtml: "<p>Se hvor tiden egentlig går i ett teams måte å jobbe på.</p><p>I en halvdagsworkshop kartlegger teamet trinnene ett enkelt arbeidsstykke går gjennom fra bestilling til levering, og måler hvor mye av tiden som er arbeid og hvor mye som er venting. Du går derfra med et felles bilde av egen flyt og den første sløsingen som er verdt å fjerne.</p><ul><li>Ett teams flyt kartlagt trinn for trinn, av dem som gjør arbeidet</li><li>Arbeidstid sammenlignet med ventetid og omarbeid</li><li>De få forbedringene som er mest verdt å prøve først</li></ul>",
+    pictures: [],
+  },
+  {
+    id: "cross-team-dependency",
+    title: "Workshop om avhengigheter mellom team",
+    hidden: false,
+    descriptionHtml: "<p>Få flere team, eller flere leverandører, til å planlegge som ett.</p><p>Når team er avhengige av hverandres leveranser, fungerer en plan bare hvis alles forpliktelser passer sammen. Jeg fasiliterer en planleggingsøkt der teamene sier hva de trenger av hverandre, blir enige om hvem som leverer hva og når, og peker på risikoene som går på tvers av teamgrensene.</p><ul><li>Behov mellom team og leverandører lagt frem på én tavle</li><li>Tydelige avtaler om hvem som leverer hva, og når</li><li>Risikoer på tvers av team navngitt tidlig, med eiere</li></ul>",
+    pictures: [],
+  },
+  {
+    id: "leadership-lab",
+    title: "Lederlabben (coaching)",
+    hidden: false,
+    descriptionHtml: "<p>Led på en måte som hjelper teamene å levere.</p><p>En liten serie økter for ledere, produkteiere og teamledere som vil gå fra å styre arbeidet til å legge til rette for det. Vi bruker deres egne situasjoner, øver på nye tilnærminger sammen, og du prøver dem ut mellom øktene.</p><ul><li>Liten gruppe, med fortrolig diskusjon av reelle situasjoner</li><li>Praktiske måter å stille bedre spørsmål, delegere og fjerne hindringer på</li><li>Eksperimenter mellom øktene og refleksjon over hva som fungerte</li></ul>",
     pictures: [],
   },
 ];
