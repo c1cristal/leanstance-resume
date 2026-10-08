@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import type { ReactNode } from "react";
 
 import { getContent } from "@/content";
-import { ASSET_ROOT, BASE_PATH } from "@/content/locales";
+import { ASSET_ROOT, BASE_PATH, LANGUAGE_KEY } from "@/content/locales";
 import type { Locale } from "@/types/resume";
 
 const montserrat = localFont({
@@ -51,10 +52,19 @@ export function buildMetadata(locale: Locale): Metadata {
   };
 }
 
+// Runs before the English page paints (the site is static, so there is no server to choose a language):
+// a visitor whose browser is set to Norwegian (nb, nn or no) is sent to /no/, unless they picked a language
+// with the switch before. The hash is kept so a link to a section still lands on it.
+const NORWEGIAN_REDIRECT = `(function(){var c="";try{c=localStorage.getItem(${JSON.stringify(LANGUAGE_KEY)})||""}catch(e){}if(c)return;var l=(navigator.languages&&navigator.languages[0])||navigator.language||"";if(/^(nb|nn|no)(-|$)/i.test(l))location.replace(${JSON.stringify(PATHS.no)}+location.hash)})()`;
+
 export function Document({ locale, children }: { locale: Locale; children: ReactNode }) {
   return (
     <html lang={getContent(locale).site.lang} dir="ltr" className={`${montserrat.variable} h-full`}>
-      <body className="h-full">{children}</body>
+      <body className="h-full">
+        {children}
+        {/* A plain <script> in a component never runs on the client; next/script puts this one in the page head. */}
+        {locale === "en" && <Script id="norwegian-redirect" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: NORWEGIAN_REDIRECT }} />}
+      </body>
     </html>
   );
 }

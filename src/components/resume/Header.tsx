@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 import { BarsIcon, CloudDownloadAltIcon, ShareAltIcon } from "./icons";
-import { LANGUAGES } from "@/content/locales";
+import { LANGUAGE_KEY, LANGUAGES } from "@/content/locales";
 import type { ResumeContent } from "@/types/resume";
 
 import { useIsClient } from "./useIsClient";
@@ -31,6 +31,15 @@ function detectActiveSection(): string | null {
     if (topVisible || bottomVisible) active = host.dataset.resumeSection ?? null;
   });
   return active;
+}
+
+// A visitor who picks a language with the switch keeps it: the English page no longer sends them to Norwegian.
+function rememberLanguage(target: string) {
+  try {
+    localStorage.setItem(LANGUAGE_KEY, target);
+  } catch {
+    // Storage can be blocked (private window); the switch still works, it just is not remembered.
+  }
 }
 
 export function Header({ content }: { content: ResumeContent }) {
@@ -133,11 +142,13 @@ export function Header({ content }: { content: ResumeContent }) {
               {LANGUAGES.map(({ locale: target, label, href }) => (
                 <li key={label}>
                   {target === locale ? (
-                    <Link href={href} className={styles.active}>
+                    <Link href={href} className={styles.active} onClick={() => rememberLanguage(target)}>
                       {label}
                     </Link>
                   ) : (
-                    <Link href={href}>{label}</Link>
+                    <Link href={href} onClick={() => rememberLanguage(target)}>
+                      {label}
+                    </Link>
                   )}
                 </li>
               ))}
