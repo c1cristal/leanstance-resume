@@ -27,6 +27,8 @@
   top: 50%;
   transform: translateY(-50%);
   position: relative;
+  /* Keeps the circles above .mainCont, which comes later and would otherwise cover all but their rim. */
+  z-index: 1;
 }
 
 .milestone {

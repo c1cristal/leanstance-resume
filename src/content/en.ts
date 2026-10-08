@@ -33,15 +33,6 @@ const site = {
   lang: "en",
   resumePdf: `${ASSET_ROOT}/docs/cv-english.pdf`,
   contactSubject: "New message from your live resume",
-  photoCredits: [
-    {
-      title: "Yara House in Oslo",
-      author: "Esben Tuman",
-      license: "CC BY-SA 4.0",
-      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
-      sourceUrl: "https://commons.wikimedia.org/wiki/File:Yara_House_in_Oslo.jpg",
-    },
-  ],
 };
 
 const ui: ResumeContent["ui"] = {
@@ -658,7 +649,7 @@ const experiences: ResumeExperience[] = [
         href: "https://www.instagram.com/capgemini/"
       }
     ],
-    backgroundUrl: `${ASSET_ROOT}/images/experience/yara-house-oslo.jpg`,
+    backgroundUrl: `${ASSET_ROOT}/images/experience/yara-plant.jpg`,
   },
   {
     position: 20,

@@ -6,6 +6,9 @@ export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const ASSET_ROOT = `${BASE_PATH}/resume`;
 
+// localStorage key holding the language a visitor chose with the EN/NO switch.
+export const LANGUAGE_KEY = "resume-language";
+
 // English is served at "/" and Norwegian at "/no" (see the route groups under src/app).
 export const LANGUAGES: { locale: Locale; label: string; href: string }[] = [
   { locale: "en", label: "EN", href: "/" },
