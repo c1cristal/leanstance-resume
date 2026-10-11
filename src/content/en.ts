@@ -23,10 +23,12 @@ const personal = {
   email: "cristal.richardson@leanstance.com",
   phone: "+47 409 55 497",
   location: "Averøy, Møre og Romsdal, Norway",
+  jobTitle: "Agile Coach & Performance Partner",
+  address: { locality: "Averøy", region: "Møre og Romsdal", country: "NO" },
 };
 
 const site = {
-  title: "Live Resume - Cristal Richardson",
+  title: "Cristal Richardson - Performance Partner | Leanstance",
   description:
     "Greetings, I'm your Performance Partner with 25+ years of experience in the finance and telecommunications sectors. Find out more in my live-resume!",
   url: "https://leanstance.com",

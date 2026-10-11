@@ -57,6 +57,10 @@ export interface ResumePersonal {
   email: string;
   phone: string;
   location: string;
+  // Used in the structured data (JSON-LD) that search engines read, e.g. "Agile Coach & Performance Partner".
+  jobTitle: string;
+  // The place as structured data: city or area, region and ISO country code.
+  address: { locality: string; region: string; country: string };
 }
 
 export interface ResumeSite {

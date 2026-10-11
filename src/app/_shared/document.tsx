@@ -57,11 +57,35 @@ export function buildMetadata(locale: Locale): Metadata {
 // with the switch before. The hash is kept so a link to a section still lands on it.
 const NORWEGIAN_REDIRECT = `(function(){var c="";try{c=localStorage.getItem(${JSON.stringify(LANGUAGE_KEY)})||""}catch(e){}if(c)return;var l=(navigator.languages&&navigator.languages[0])||navigator.language||"";if(/^(nb|nn|no)(-|$)/i.test(l))location.replace(${JSON.stringify(PATHS.no)}+location.hash)})()`;
 
+// Structured data (JSON-LD) that tells search engines this page is about one person, in the page's language.
+function buildPersonJsonLd(locale: Locale) {
+  const { personal, site, aboutMedias } = getContent(locale);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: personal.name,
+    jobTitle: personal.jobTitle,
+    description: site.description,
+    url: `${site.url}${PATHS[locale]}`,
+    image: `${site.url}${personal.picture}`,
+    worksFor: { "@type": "Organization", name: "Leanstance", url: site.url },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: personal.address.locality,
+      addressRegion: personal.address.region,
+      addressCountry: personal.address.country,
+    },
+    sameAs: aboutMedias.map((media) => media.href),
+    inLanguage: site.lang,
+  };
+}
+
 export function Document({ locale, children }: { locale: Locale; children: ReactNode }) {
   return (
     <html lang={getContent(locale).site.lang} dir="ltr" className={`${montserrat.variable} h-full`}>
       <body className="h-full">
         {children}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildPersonJsonLd(locale)) }} />
         {/* A plain <script> in a component never runs on the client; next/script puts this one in the page head. */}
         {locale === "en" && <Script id="norwegian-redirect" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: NORWEGIAN_REDIRECT }} />}
       </body>
