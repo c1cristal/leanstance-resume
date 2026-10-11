@@ -31,9 +31,9 @@
 
 .aboutContainer .firstColumn .eyebrow {
   color: var(--resume-text-heading-muted);
-  font-size: 22px;
+  /* A little larger than the Hobbies title (22px), which keeps that size at every width. */
+  font-size: 26px;
   font-weight: 600;
-  text-transform: uppercase;
   margin: 0;
 }
 
@@ -111,7 +111,7 @@
 
 @media screen and (max-width: 960px) {
   .aboutContainer { width: 80vw; flex-wrap: wrap; }
-  .firstColumn .eyebrow { font-size: 20px; }
+  .aboutContainer .firstColumn .eyebrow { font-size: 24px; }
   .firstColumn h1 { font-size: 32px; }
   .secondColumn { display: flex; flex-direction: column; margin-top: 2em; }
   .secondColumn .profilePicture { width: 360px; height: 360px; align-self: center; }
@@ -131,7 +131,6 @@
 }
 
 @media screen and (max-width: 460px) {
-  .aboutContainer .firstColumn .eyebrow { font-size: 18px; }
   .aboutContainer .firstColumn h1 { font-size: 20px; }
   .aboutContainer .firstColumn p.text { font-size: 14px; }
   .secondColumn .profilePicture { width: 280px; height: 280px; }
