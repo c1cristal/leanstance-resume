@@ -107,7 +107,7 @@ export function Contact({ content }: { content: ResumeContent }) {
       <div className={cn(styles.container, feedbackStatus && styles.fade)}>
         <div className={styles.leftSide}>
           <div className={styles.title}>
-            <h1>{ui.contact.title}</h1>
+            <h2>{ui.contact.title}</h2>
           </div>
           <div className={styles.topContainer}>
             <div className={styles.picture} style={{ backgroundImage: `url("${personal.picture}")` }} />

@@ -13,10 +13,10 @@ export function About({ content }: { content: ResumeContent }) {
     <section id="about" className={styles.about} itemScope itemType="https://schema.org/AboutPage">
       <div className={styles.aboutContainer} itemScope itemType="https://schema.org/Person">
         <div className={styles.firstColumn}>
-          <h1>{ui.about.title}</h1>
-          <h2>
+          <p className={styles.eyebrow}>{ui.about.title}</p>
+          <h1>
             <span itemProp="name">{personal.name}</span>
-          </h2>
+          </h1>
           <p className={styles.text}>
             {/* {{key}} tokens in the text become glossary terms; the HTML between them renders as is. */}
             {aboutDescriptionHtml.split(/\{\{([\w-]+)\}\}/).map((part, index) => {

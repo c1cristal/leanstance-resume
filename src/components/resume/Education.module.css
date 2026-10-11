@@ -15,7 +15,7 @@
   max-width: 1400px;
 }
 
-.container h1 {
+.container h2 {
   margin: 0 0 0.6em;
   font-size: 42px;
   font-weight: 600;
@@ -36,7 +36,7 @@
   padding: 1.5em 2em 1em;
 }
 
-.card h2 {
+.card h3 {
   margin: 0 0 0.6em;
   font-size: 24px;
   font-weight: 600;
@@ -102,12 +102,12 @@
 @media screen and (max-width: 880px) {
   .list { column-count: 1; }
   .card { padding: 1.2em 1.4em 0.6em; }
-  .container h1 { font-size: 34px; text-align: center; }
-  .card h2 { font-size: 22px; }
+  .container h2 { font-size: 34px; text-align: center; }
+  .card h3 { font-size: 22px; }
   .name { font-size: 18px; }
   .detail, .year { font-size: 15px; }
 }
 
 @media screen and (max-width: 500px) {
-  .container h1 { font-size: 28px; }
+  .container h2 { font-size: 28px; }
 }
