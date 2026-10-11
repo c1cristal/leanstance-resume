@@ -32,7 +32,7 @@
 .aboutContainer .firstColumn .eyebrow {
   color: var(--resume-text-heading-muted);
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   margin: 0;
 }
