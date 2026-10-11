@@ -28,7 +28,7 @@ const personal = {
 };
 
 const site = {
-  title: "Cristal Richardson - Agile Coach & Performance Partner | Leanstance",
+  title: "Cristal Richardson - Performance Partner | Leanstance",
   description:
     "Greetings, I'm your Performance Partner with 25+ years of experience in the finance and telecommunications sectors. Find out more in my live-resume!",
   url: "https://leanstance.com",
