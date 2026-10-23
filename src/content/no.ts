@@ -700,6 +700,7 @@ const experiences: ResumeExperience[] = [
   },
   {
     position: 22,
+    hidden: true,
     companyName: "Bjørnådal Arkitektstudio",
     startAt: "2023",
     endAt: "2023",
