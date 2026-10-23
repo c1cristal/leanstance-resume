@@ -37,7 +37,9 @@
   flex-grow: 4;
 }
 
-.topContainer .title h1 {
+.topContainer .title h2 {
+  /* An h2 has a larger default margin than the h1 this used to be; keep the original spacing. */
+  margin-block: 0.67em;
   font-size: 42px;
   font-weight: 600;
 }
@@ -304,7 +306,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .topContainer .title h1 { font-size: 38px; }
+  .topContainer .title h2 { font-size: 38px; }
   .topContainer .navigation { font-size: 28px; }
   .eventsContent .companyName { font-size: 30px; }
   .eventsContent .role,
@@ -318,7 +320,7 @@
 
 @media screen and (max-width: 880px) {
   .topContainer { flex-direction: column; }
-  .topContainer .title h1 { margin: 0 0 30px; text-align: center; }
+  .topContainer .title h2 { margin: 0 0 30px; text-align: center; }
   .middleContainer { margin-top: 30px; }
   .eventsContent .socialMedia .icon { font-size: 40px; }
 }
@@ -348,7 +350,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .topContainer .title h1 { font-size: 34px; }
+  .topContainer .title h2 { font-size: 34px; }
   .topContainer .navigationMobile .current { font-size: 32px; }
   .topContainer .navigationMobile .molding { padding: 10px 5px 10px 6px; }
   .eventsContent .headerBlock .logoBlock img { height: 70px; }

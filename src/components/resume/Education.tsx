@@ -8,10 +8,10 @@ export function Education({ content }: { content: ResumeContent }) {
   return (
     <section id="education" className={styles.education}>
       <div className={styles.container}>
-        <h1>{ui.education.title}</h1>
+        <h2>{ui.education.title}</h2>
         <div className={styles.columns}>
           <div className={styles.card}>
-            <h2>{ui.education.degrees}</h2>
+            <h3>{ui.education.degrees}</h3>
             <ul className={cn(styles.list, styles.threeColumns)}>
               {education.map(({ title, institution, year }) => (
                 <li key={`${title}-${institution}`}>
@@ -25,7 +25,7 @@ export function Education({ content }: { content: ResumeContent }) {
             </ul>
           </div>
           <div className={styles.card}>
-            <h2>{ui.education.certifications}</h2>
+            <h3>{ui.education.certifications}</h3>
             <ul className={cn(styles.list, styles.twoColumns)}>
               {certifications.map(({ title, issuer, year, credentialId }) => (
                 <li key={title}>

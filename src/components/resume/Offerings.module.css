@@ -34,7 +34,9 @@
   flex-grow: 4;
 }
 
-.topContainer .title h1 {
+.topContainer .title h2 {
+  /* An h2 has a larger default margin than the h1 this used to be; keep the original spacing. */
+  margin-block: 0.67em;
   font-size: 42px;
   font-weight: 600;
 }
@@ -184,7 +186,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .topContainer .title h1 { font-size: 32px; }
+  .topContainer .title h2 { font-size: 32px; }
   .topContainer .navigation { font-size: 22px; }
   .offeringTitle { font-size: 28px; }
   .description { font-size: 18px; }

@@ -119,7 +119,7 @@ export function Experience({ content }: { content: ResumeContent }) {
         <div className={styles.container}>
           <div className={styles.topContainer}>
             <div className={styles.title}>
-              <h1>{ui.experience.title}</h1>
+              <h2>{ui.experience.title}</h2>
             </div>
             <div className={styles.navigation}>
               <a

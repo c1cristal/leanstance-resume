@@ -30,7 +30,7 @@ export function Offerings({ content }: { content: ResumeContent }) {
         <div className={styles.container}>
           <div className={styles.topContainer}>
             <div className={styles.title}>
-              <h1>{ui.offerings.title}</h1>
+              <h2>{ui.offerings.title}</h2>
             </div>
             <div className={styles.navigation}>
               <a
@@ -57,7 +57,7 @@ export function Offerings({ content }: { content: ResumeContent }) {
             </div>
           </div>
           <div className={styles.slide} key={current} {...swipeHandlers}>
-            <h2 className={styles.offeringTitle}>{offering.title}</h2>
+            <h3 className={styles.offeringTitle}>{offering.title}</h3>
             <div className={styles.description} dangerouslySetInnerHTML={{ __html: offering.descriptionHtml }} />
             {offering.pictures.length > 0 && (
               <div className={styles.pictures}>
