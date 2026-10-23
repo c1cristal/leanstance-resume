@@ -618,6 +618,18 @@ const experiences: ResumeExperience[] = [
   },
   {
     position: 19,
+    companyName: "Tørristua AS (Leanstance)",
+    startAt: "2021",
+    endAt: null,
+    city: "",
+    country: "Norge",
+    role: "Performance Partner",
+    descriptionHtml: "<b>Leanstance</b> (Tørristua AS) er et norsk rådgivningsselskap som hjelper organisasjoner med å ta i bruk Lean og agile arbeidsmåter.<br><br><ul><li>Innfører Lean/agile metoder i organisasjoner.</li><li>Oppmuntrer til endringer i tankesett og kultur.</li><li>Hjelper organisasjoner med å eksperimentere med endringer i team, strukturer, ledelsesstiler og arbeidsmåter.</li></ul>",
+    technologies: ["Lean", "Agile"],
+    medias: [],
+  },
+  {
+    position: 20,
     companyName: "Capgemini / Yara",
     logo: `${ASSET_ROOT}/images/experience/logo/capgemini.svg`,
     startAt: "2021",
@@ -652,7 +664,7 @@ const experiences: ResumeExperience[] = [
     backgroundUrl: `${ASSET_ROOT}/images/experience/yara-plant.jpg`,
   },
   {
-    position: 20,
+    position: 21,
     companyName: "Capgemini / Volvo",
     logo: `${ASSET_ROOT}/images/experience/logo/capgemini.svg`,
     startAt: "2021",
@@ -685,18 +697,6 @@ const experiences: ResumeExperience[] = [
       }
     ],
     backgroundUrl: `${ASSET_ROOT}/images/experience/volvo-museum-gothenburg.jpg`,
-  },
-  {
-    position: 21,
-    companyName: "Tørristua AS (Leanstance)",
-    startAt: "2021",
-    endAt: null,
-    city: "",
-    country: "Norge",
-    role: "Performance Partner",
-    descriptionHtml: "<b>Leanstance</b> (Tørristua AS) er et norsk rådgivningsselskap som hjelper organisasjoner med å ta i bruk Lean og agile arbeidsmåter.<br><br><ul><li>Innfører Lean/agile metoder i organisasjoner.</li><li>Oppmuntrer til endringer i tankesett og kultur.</li><li>Hjelper organisasjoner med å eksperimentere med endringer i team, strukturer, ledelsesstiler og arbeidsmåter.</li></ul>",
-    technologies: ["Lean", "Agile"],
-    medias: [],
   },
   {
     position: 22,
