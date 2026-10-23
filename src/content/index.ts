@@ -6,8 +6,8 @@ import { OFFERING_ORDER } from "./offeringOrder";
 
 const CONTENT: Record<Locale, ResumeContent> = { en, no };
 
-// Offerings are put in OFFERING_ORDER here, and those marked hidden are removed, on the server, so their
-// text is never sent to the browser.
+// Offerings are put in OFFERING_ORDER here, and offerings and jobs marked hidden are removed, on the server, so
+// their text is never sent to the browser.
 function rank(id: string) {
   const index = OFFERING_ORDER.indexOf(id);
   return index === -1 ? OFFERING_ORDER.length : index;
@@ -15,5 +15,10 @@ function rank(id: string) {
 
 export function getContent(locale: Locale): ResumeContent {
   const content = CONTENT[locale];
-  return { ...content, offerings: content.offerings.filter((offering) => !offering.hidden).sort((a, b) => rank(a.id) - rank(b.id)) };
+  // The experience carousel counts on positions 1..N, so the jobs left after hiding are numbered again.
+  const experiences = content.experiences
+    .filter((experience) => !experience.hidden)
+    .sort((a, b) => a.position - b.position)
+    .map((experience, index) => ({ ...experience, position: index + 1 }));
+  return { ...content, experiences, offerings: content.offerings.filter((offering) => !offering.hidden).sort((a, b) => rank(a.id) - rank(b.id)) };
 }

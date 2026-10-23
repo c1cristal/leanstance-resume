@@ -12,6 +12,9 @@ export interface ResumeHobby {
 }
 
 export interface ResumeExperience {
+  // Keeps the job in the content but leaves it off the page. The remaining jobs are renumbered, so a gap in
+  // `position` does not matter.
+  hidden?: boolean;
   position: number;
   companyName: string;
   website?: string;
