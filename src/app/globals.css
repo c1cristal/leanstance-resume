@@ -181,9 +181,9 @@
   --resume-shadow-card: #f0dfdf29;
 
   /* Contact form */
-  --resume-submit-bg: #70c576;
-  --resume-submit-bg-hover: #68bd6e;
-  --resume-submit-text-hover: #2c612f;
+  --resume-submit-bg: #222f5c; /* Leanstance navy */
+  --resume-submit-bg-hover: #5e81ab; /* Leanstance logo blue */
+  --resume-submit-text-hover: #fff;
   --resume-danger: red;
   --resume-success-bg: #c4e4c6;
   --resume-success-border: #cecece;
