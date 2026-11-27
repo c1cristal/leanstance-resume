@@ -22,15 +22,16 @@ const personal = {
   handle: "leanstance",
   email: "cristal.richardson@leanstance.com",
   phone: "+47 409 55 497",
-  location: "Averøy, Møre og Romsdal, Norway",
+  location: "Averøy, near Kristiansund and Molde, Norway",
   jobTitle: "Agile Coach & Performance Partner",
   address: { locality: "Averøy", region: "Møre og Romsdal", country: "NO" },
+  areaServed: ["Averøy", "Kristiansund", "Molde"],
 };
 
 const site = {
-  title: "Cristal Richardson - Performance Partner | Leanstance",
+  title: "Cristal Richardson - Agile Coach in Averøy, Kristiansund & Molde | Leanstance",
   description:
-    "Greetings, I'm your Performance Partner with 25+ years of experience in the finance and telecommunications sectors. Find out more in my live-resume!",
+    "Greetings, I'm your Performance Partner with 25+ years in finance and telecommunications, based on Averøy and working in person in Kristiansund and Molde, or online. Find out more in my live-resume!",
   url: "https://leanstance.com",
   lang: "en",
   resumePdf: `${ASSET_ROOT}/docs/cv-english.pdf`,
@@ -87,7 +88,7 @@ const ui: ResumeContent["ui"] = {
   },
 };
 
-const aboutDescriptionHtml = "I’m your Performance Partner at Leanstance, based in the Nordmøre region. Over 25 years in telecommunications and finance have taken me from development and systems work to coaching teams and leaders through complex delivery, with teams across the US, Australia, India, Europe and the Nordics.<br><br>Highlights include assisting <a href=\"https://www.capgemini.com\" target=\"_blank\" rel=\"noopener noreferrer\">Capgemini</a> with <a href=\"https://www.volvogroup.com\" target=\"_blank\" rel=\"noopener noreferrer\">Volvo</a> contract negotiations, coaching within a major core banking program at <a href=\"https://www.nordea.com\" target=\"_blank\" rel=\"noopener noreferrer\">Nordea</a> as an {{agile-coach}}, supporting <a href=\"https://www.yara.com\" target=\"_blank\" rel=\"noopener noreferrer\">Yara</a>’s agile transformation within a small area of the organisation, and working as a {{scrum-master}} at Hi3G (<a href=\"https://www.tre.se\" target=\"_blank\" rel=\"noopener noreferrer\">Tre</a>).<br><br>Teams often run on “autopilot”. {{lean}} and {{agile}} principles, {{systems-thinking}} and a direct, value-based approach help uncover the real obstacles, leaving room for better collaboration, faster learning and solutions that are genuinely deliverable.";
+const aboutDescriptionHtml = "I’m your Performance Partner at Leanstance, based on Averøy in Nordmøre, working in person in Kristiansund, Molde and across Møre og Romsdal, and online. Over 25 years in telecommunications and finance have taken me from development and systems work to coaching teams and leaders through complex delivery, with teams across the US, Australia, India, Europe and the Nordics.<br><br>Highlights include assisting <a href=\"https://www.capgemini.com\" target=\"_blank\" rel=\"noopener noreferrer\">Capgemini</a> with <a href=\"https://www.volvogroup.com\" target=\"_blank\" rel=\"noopener noreferrer\">Volvo</a> contract negotiations, coaching within a major core banking program at <a href=\"https://www.nordea.com\" target=\"_blank\" rel=\"noopener noreferrer\">Nordea</a> as an {{agile-coach}}, supporting <a href=\"https://www.yara.com\" target=\"_blank\" rel=\"noopener noreferrer\">Yara</a>’s agile transformation within a small area of the organisation, and working as a {{scrum-master}} at Hi3G (<a href=\"https://www.tre.se\" target=\"_blank\" rel=\"noopener noreferrer\">Tre</a>).<br><br>Teams often run on “autopilot”. {{lean}} and {{agile}} principles, {{systems-thinking}} and a direct, value-based approach help uncover the real obstacles, leaving room for better collaboration, faster learning and solutions that are genuinely deliverable.";
 
 const glossary: ResumeContent["glossary"] = {
   "agile-coach": {

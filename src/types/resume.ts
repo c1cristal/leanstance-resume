@@ -64,6 +64,8 @@ export interface ResumePersonal {
   jobTitle: string;
   // The place as structured data: city or area, region and ISO country code.
   address: { locality: string; region: string; country: string };
+  // Towns where the work is done in person, used as areaServed in the structured data.
+  areaServed: string[];
 }
 
 export interface ResumeSite {

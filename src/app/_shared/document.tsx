@@ -68,7 +68,13 @@ function buildPersonJsonLd(locale: Locale) {
     description: site.description,
     url: `${site.url}${PATHS[locale]}`,
     image: `${site.url}${personal.picture}`,
-    worksFor: { "@type": "Organization", name: "Leanstance", url: site.url },
+    worksFor: {
+      "@type": "Organization",
+      name: "Leanstance",
+      url: site.url,
+      areaServed: personal.areaServed.map((name) => ({ "@type": "City", name })),
+    },
+    homeLocation: { "@type": "Place", name: personal.address.locality },
     address: {
       "@type": "PostalAddress",
       addressLocality: personal.address.locality,
