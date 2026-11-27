@@ -26,6 +26,8 @@ const SEO = `${ASSET_ROOT}/seo`;
 // Each has its own root layout (see the (en) and (no) route groups) so <html lang> is correct.
 const PATHS: Record<Locale, string> = { en: `${BASE_PATH}/`, no: `${BASE_PATH}/no/` };
 
+const OG_LOCALES: Record<Locale, string> = { en: "en_US", no: "nb_NO" };
+
 export const viewport = { themeColor: "#fff" };
 
 export function buildMetadata(locale: Locale): Metadata {
@@ -47,7 +49,10 @@ export function buildMetadata(locale: Locale): Metadata {
       title: site.title,
       description: site.description,
       type: "website",
-      images: [`${SEO}/og-image.png`],
+      url: PATHS[locale],
+      locale: OG_LOCALES[locale],
+      // The preview image has the page name written on it, so each language has its own.
+      images: [{ url: `${SEO}/${locale === "no" ? "og-image-no" : "og-image"}.png`, width: 1197, height: 626, alt: site.title }],
     },
   };
 }
