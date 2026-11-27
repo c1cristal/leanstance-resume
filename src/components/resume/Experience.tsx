@@ -1,22 +1,40 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
 import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
-import type { ResumeContent } from "@/types/resume";
+import type { ResumeContent, ResumeExperience } from "@/types/resume";
 
-import { formatMonthYear, formatYear } from "./dates";
+import { formatMonthYear, formatYear, parseDate } from "./dates";
 import { ExperienceTimeline } from "./ExperienceTimeline";
 import { MediaIcon } from "./MediaIcon";
 import { RichText } from "./RichText";
+import { useAutoAdvance } from "./useAutoAdvance";
 import { useSwipe } from "./useSwipe";
 import styles from "./Experience.module.css";
 
 const TRANSITION_TIME = 400;
+// How long each entry stays up while the section plays on its own.
+const AUTOPLAY_INTERVAL = 15000;
 type TransitionClasses = Record<number, string>;
+
+// The order the auto run follows: the current jobs first (longest-running first, so the opening slide leads),
+// then the past from the most recently ended back to the oldest.
+function playbackOrder(experiences: ResumeExperience[]) {
+  const time = (value: string) => parseDate(value).getTime();
+  return [...experiences]
+    .sort((a, b) => {
+      if (a.endAt === null || b.endAt === null) {
+        if (a.endAt !== b.endAt) return a.endAt === null ? -1 : 1;
+        return time(a.startAt) - time(b.startAt) || a.position - b.position;
+      }
+      return time(b.endAt) - time(a.endAt) || time(b.startAt) - time(a.startAt) || b.position - a.position;
+    })
+    .map((experience) => experience.position);
+}
 
 function toList(value: string | string[]) {
   return (Array.isArray(value) ? value : [value]).filter(Boolean);
@@ -93,6 +111,14 @@ export function Experience({ content }: { content: ResumeContent }) {
     timers.current = [setTimeout(() => setTransitions({}), TRANSITION_TIME)];
   };
 
+  const sequence = useMemo(() => playbackOrder(experiences), [experiences]);
+  const { ref: sectionRef, stop: stopAutoplay } = useAutoAdvance({
+    sequence,
+    current: currentPosition,
+    onAdvance: navigate,
+    intervalMs: AUTOPLAY_INTERVAL,
+  });
+
   const onPrevious = () => navigate(currentPosition - 1);
   const onNext = () => navigate(currentPosition + 1);
   const swipeHandlers = useSwipe({ onSwipeRight: onPrevious, onSwipeLeft: onNext });
@@ -106,6 +132,10 @@ export function Experience({ content }: { content: ResumeContent }) {
   return (
     <section
       id="experience"
+      ref={sectionRef}
+      // Any click, tap, swipe or key press in the section is the visitor taking over, so the auto run stops.
+      onPointerDownCapture={stopAutoplay}
+      onKeyDownCapture={stopAutoplay}
       className={styles.landscape}
       style={
         current.backgroundUrl
