@@ -29,7 +29,7 @@ const personal = {
 };
 
 const site = {
-  title: "Cristal Richardson - Agile Coach in Averøy, Kristiansund & Molde | Leanstance",
+  title: "Cristal Richardson - Performance Partner in Averøy, Kristiansund & Molde | Leanstance",
   description:
     "Performance Partner, 25+ years in finance and telecom. Local (Averøy, Kristiansund, Molde), remote, and by arrangement. See my live-resume.",
   url: "https://leanstance.com",
