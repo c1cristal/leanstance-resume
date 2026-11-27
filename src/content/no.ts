@@ -32,7 +32,7 @@ const personal = {
 const site = {
   title: "Cristal Richardson - Agile coach på Averøy, i Kristiansund og Molde | Leanstance",
   description:
-    "Hei, jeg er din Performance Partner med over 25 års erfaring fra finans og telekommunikasjon, basert på Averøy og med oppdrag på stedet i Kristiansund og Molde, eller digitalt. Les mer i min live-CV!",
+    "Performance Partner, over 25 års erfaring fra finans og telekom. Lokalt (Averøy, Kristiansund, Molde), digitalt og etter avtale. Se min live-CV.",
   url: "https://leanstance.com",
   lang: "no",
   resumePdf: `${ASSET_ROOT}/docs/cv-norsk.pdf`,
@@ -89,7 +89,7 @@ const ui: ResumeContent["ui"] = {
   },
 };
 
-const aboutDescriptionHtml = "Jeg er din Performance Partner hos Leanstance, med base på Averøy i Nordmøre. Jeg jobber på stedet i Kristiansund, Molde og resten av Møre og Romsdal, og digitalt. Over 25 år innen telekommunikasjon og finans har tatt meg fra utvikling og systemarbeid til å coache team og ledere gjennom komplekse leveranser, med team i USA, Australia, India, Europa og Norden.<br><br>Høydepunkter er blant annet å ha bistått <a href=\"https://www.capgemini.com\" target=\"_blank\" rel=\"noopener noreferrer\">Capgemini</a> i kontraktsforhandlingene med <a href=\"https://www.volvogroup.com\" target=\"_blank\" rel=\"noopener noreferrer\">Volvo</a>, coachet innenfor et stort kjernebankprogram i <a href=\"https://www.nordea.com\" target=\"_blank\" rel=\"noopener noreferrer\">Nordea</a> som {{agile-coach}}, støttet den agile transformasjonen i et lite område av <a href=\"https://www.yara.com\" target=\"_blank\" rel=\"noopener noreferrer\">Yara</a>, og jobbet som {{scrum-master}} hos Hi3G (<a href=\"https://www.tre.se\" target=\"_blank\" rel=\"noopener noreferrer\">Tre</a>).<br><br>Team går ofte på «autopilot». {{lean}}- og {{agile}} prinsipper, {{systems-thinking}} og en direkte, verdibasert tilnærming hjelper til med å avdekke de virkelige hindringene og skaper rom for bedre samarbeid, raskere læring og løsninger som faktisk lar seg levere.";
+const aboutDescriptionHtml = "Jeg er din Performance Partner hos Leanstance, med oppdrag på Averøy, i Kristiansund, Molde og resten av Møre og Romsdal, på stedet og digitalt. Jeg kan også komme til resten av Norge og utlandet etter avtale. Over 25 år innen telekommunikasjon og finans har tatt meg fra utvikling og systemarbeid til å coache team og ledere gjennom komplekse leveranser, med team i USA, Australia, India, Europa og Norden.<br><br>Høydepunkter er blant annet å ha bistått <a href=\"https://www.capgemini.com\" target=\"_blank\" rel=\"noopener noreferrer\">Capgemini</a> i kontraktsforhandlingene med <a href=\"https://www.volvogroup.com\" target=\"_blank\" rel=\"noopener noreferrer\">Volvo</a>, coachet innenfor et stort kjernebankprogram i <a href=\"https://www.nordea.com\" target=\"_blank\" rel=\"noopener noreferrer\">Nordea</a> som {{agile-coach}}, støttet den agile transformasjonen i et lite område av <a href=\"https://www.yara.com\" target=\"_blank\" rel=\"noopener noreferrer\">Yara</a>, jobbet som {{scrum-master}} hos Hi3G (<a href=\"https://www.tre.se\" target=\"_blank\" rel=\"noopener noreferrer\">Tre</a>), og frivillig hackathon-coach for team hos <a href=\"https://greentechsee.no/speakers/cristal-richardson\" target=\"_blank\" rel=\"noopener noreferrer\">GreenTechSee</a> i Kristiansund.<br><br>Team går ofte på «autopilot». {{lean}}- og {{agile}} prinsipper, {{systems-thinking}} og en direkte, verdibasert tilnærming hjelper til med å avdekke de virkelige hindringene og skaper rom for bedre samarbeid, raskere læring og løsninger som faktisk lar seg levere.";
 
 const glossary: ResumeContent["glossary"] = {
   "agile-coach": {
@@ -713,7 +713,71 @@ const experiences: ResumeExperience[] = [
     medias: [],
   },
   {
+    position: 24,
+    companyName: "Fortidsminneforeningen",
+    website: "https://fortidsminneforeningen.no/museum/kvernes-stavkirke/",
+    logo: `${ASSET_ROOT}/images/experience/logo/fortidsminneforeningen.png`,
+    startAt: "04-01-2024",
+    endAt: null,
+    city: "Averøy",
+    country: "Norge",
+    role: "Guide ved Kvernes stavkirke",
+    descriptionHtml: "<b>Kvernes stavkirke</b> på Averøy har vært eid av Fortidsminneforeningen siden 1896. Kirken er bygget i 1633 og er landets eneste stavkirke bygget etter middelalderen.<br><br><ul><li>Bruker mitt unike livsperspektiv til å gjøre kirkens historie levende, og fasiliteringsferdighetene fra virksomheten min for å skape rom for nysgjerrighet og undring rundt kirken og området.</li><li>Gir omvisninger på både engelsk og norsk for cruise- og bussgrupper og andre turister.</li><li>Hjelper gjestene å kjenne forbindelsen mellom landet, menneskene og kirken, fra fortid til nåtid.</li></ul>",
+    technologies: ["Guiding", "Fasilitering"],
+    medias: [
+      {
+        icon: "instagram",
+        title: "Instagram Fortidsminneforeningen",
+        href: "https://www.instagram.com/fortidsminneforeningen/"
+      },
+      {
+        icon: "facebook",
+        title: "Facebook Fortidsminneforeningen",
+        href: "https://www.facebook.com/Fortidsminneforeningen-141683629314625/"
+      },
+      {
+        icon: "youtube",
+        title: "YouTube Fortidsminneforeningen",
+        href: "https://www.youtube.com/@fortidsminneforeningen8650"
+      }
+    ],
+    backgroundUrl: `${ASSET_ROOT}/images/experience/kvernes-stavkirke.jpg`,
+    backgroundPosition: "center 40%",
+  },
+  {
     position: 23,
+    companyName: "GreenTechSee",
+    website: "https://greentechsee.no/",
+    logo: `${ASSET_ROOT}/images/experience/logo/greentechsee.png`,
+    startAt: "03-11-2024",
+    endAt: "03-13-2024",
+    city: "Kristiansund",
+    country: "Norge",
+    role: "Hackathon-coach (frivillig)",
+    descriptionHtml: "<b>GreenTechSee</b> er en teknologifestival med hackathon der team gjør globale teknologiskifter om til lokale, konkrete løsninger.<br><br><ul><li>Frivillig hackathon-coach for de deltakende teamene.</li><li>Ledet isbryteraktivitetene.</li></ul>",
+    technologies: ["Coaching", "Fasilitering"],
+    medias: [],
+    backgroundUrl: `${ASSET_ROOT}/images/experience/green-tech-see.jpg`,
+    backgroundPosition: "center 34%",
+  },
+  {
+    position: 25,
+    companyName: "GreenTechSee",
+    website: "https://greentechsee.no/",
+    logo: `${ASSET_ROOT}/images/experience/logo/greentechsee.png`,
+    startAt: "09-02-2025",
+    endAt: "09-04-2025",
+    city: "Kristiansund",
+    country: "Norge",
+    role: "Hackathon-coach (frivillig)",
+    descriptionHtml: "<b>GreenTechSee</b> er en teknologifestival med hackathon der team gjør globale teknologiskifter om til lokale, konkrete løsninger.<br><br><ul><li>Frivillig hackathon-coach for de deltakende teamene.</li><li>Ledet isbryteraktivitetene.</li></ul>",
+    technologies: ["Coaching", "Fasilitering"],
+    medias: [],
+    backgroundUrl: `${ASSET_ROOT}/images/experience/green-tech-see.jpg`,
+    backgroundPosition: "center 34%",
+  },
+  {
+    position: 26,
     companyName: "Høgskolen i Molde",
     website: "https://www.himolde.no/",
     logo: `${ASSET_ROOT}/images/experience/logo/molde.svg`,
@@ -742,6 +806,22 @@ const experiences: ResumeExperience[] = [
       }
     ],
     backgroundUrl: `${ASSET_ROOT}/images/experience/molde-campus-kristiansund.jpg`,
+  },
+  {
+    position: 27,
+    companyName: "GreenTechSee",
+    website: "https://greentechsee.no/",
+    logo: `${ASSET_ROOT}/images/experience/logo/greentechsee.png`,
+    startAt: "09-21-2026",
+    endAt: "09-23-2026",
+    city: "Kristiansund",
+    country: "Norge",
+    role: "Hackathon-coach (frivillig)",
+    descriptionHtml: "<b>GreenTechSee</b> er en teknologifestival med hackathon der team gjør globale teknologiskifter om til lokale, konkrete løsninger.<br><br><ul><li>Frivillig hackathon-coach for de deltakende teamene.</li><li>Ledet isbryteraktivitetene.</li></ul><br>Oppført som hackathon-coach på <a href=\"https://greentechsee.no/speakers/cristal-richardson\" target=\"_blank\" rel=\"noopener noreferrer\">talersiden til GreenTechSee</a>.",
+    technologies: ["Coaching", "Fasilitering"],
+    medias: [],
+    backgroundUrl: `${ASSET_ROOT}/images/experience/green-tech-see.jpg`,
+    backgroundPosition: "center 34%",
   }
 ];
 

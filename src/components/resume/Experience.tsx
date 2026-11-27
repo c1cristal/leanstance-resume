@@ -63,10 +63,11 @@ export function Experience({ content }: { content: ResumeContent }) {
   const LAST_POSITION = experiences.length;
   const ordered = [...experiences].sort((a, b) => b.position - a.position);
   const startDates = experiences.map((experience) => experience.startAt);
-  // Open on the current job (the one without an end date), or on the newest entry if there is none.
+  // Open on the main current job (the longest-running one without an end date; side work such as guiding comes
+  // later in the list), or on the newest entry if there is none.
   const currentJobs = experiences.filter((experience) => experience.endAt === null);
   const [currentPosition, setCurrentPosition] = useState(
-    currentJobs.length > 0 ? currentJobs[currentJobs.length - 1].position : LAST_POSITION,
+    currentJobs.length > 0 ? currentJobs[0].position : LAST_POSITION,
   );
   const [transitions, setTransitions] = useState<TransitionClasses>({});
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
